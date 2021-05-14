@@ -20,7 +20,7 @@ CEP: 74001-970
 
 **Phone Number**: +55 (62) 3521-1208
 
-## Publications
+## <a href="">Publications</a>
 
 ### 2021
 
