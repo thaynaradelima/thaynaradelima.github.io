@@ -1,4 +1,4 @@
-<img src="foto.jpg" alt="drawing" width="10"/>
+<img src="foto.jpg" alt="drawing" width="100"/>
 
 ### Research Interest
 
