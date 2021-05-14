@@ -1,7 +1,7 @@
-|<img src="foto.jpg" alt="drawing" width="100"/>|
-|Assistant Professor 
+| <img src="foto.jpg" alt="drawing" width="100"/> |
+| Assistant Professor 
 
-Universidade Federal de Goiás|
+Universidade Federal de Goiás |
 
 ### Research Interest
 
