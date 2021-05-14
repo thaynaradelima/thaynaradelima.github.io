@@ -1,4 +1,4 @@
-![](foto.jpg =10x10)
+<img src="foto.jpg" alt="drawing" width="10"/>
 
 ### Research Interest
 
