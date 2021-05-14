@@ -22,8 +22,4 @@ CEP: 74001-970
 
 **Phone Number**: +55 (62) 3521-1208
 
-## <p id="Publications">Publications</a>  <a href="https://dblp.org/pid/173/9154.html">DBLP</a>
 
-### 2021
-
-## <p id="Teaching">Courses and Tutorials</p> # none|
