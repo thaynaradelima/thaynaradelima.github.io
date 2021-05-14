@@ -1,4 +1,4 @@
-| <img src="foto.jpg" alt="drawing" width="100"/> | <font size="+2">**Thaynara Arielly de Lima**.</font><br>Assistant Professor<br>Universidade Federal de Goiás |
+| <img src="foto.jpg" alt="drawing" width="100"/> | <font size="+2">**Thaynara Arielly de Lima**</font><br>Assistant Professor<br>Universidade Federal de Goiás |
 
 
 ## Research Interest
