@@ -2,7 +2,7 @@
 
 <a href="http://www.cic.unb.br">Computer Science</a> 
 <br>
-| <a href="Publications.html">More on Publications</a> |
+| <a href="Publications.md">More on Publications</a> |
 
 ## Research Interest
 
