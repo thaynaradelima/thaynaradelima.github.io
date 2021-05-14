@@ -1,9 +1,9 @@
-## Research Interest
+### Research Interest
 
 - Formal Methods
 - Evolutionary Algorithms to Sorting Permutations
 
-## Address
+### Address
 
 Instituto de Matemática e Estatística - Universidade Federal de Goiás
 
@@ -11,7 +11,7 @@ Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
 
 CEP: 74001-970
 
-## Contact
+### Contact
 **E-mail**: thaynaradelima@ufg.br
 
 **Phone Number**: +55 (62) 3521-1208
