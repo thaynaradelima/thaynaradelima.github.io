@@ -2,7 +2,7 @@
 
 <a href="http://www.cic.unb.br">Computer Science</a> 
 <br>
-| <a href="#Publications">Publications</a> | <a href="#Teaching">Tutorials and Courses</a> |
+| <a href="#Publications">Publications</a> | <a href="#Teaching">Courses and Tutorials</a> | <a href="Publications">More on Publications</>
 
 ## Research Interest
 
@@ -88,8 +88,8 @@ CEP: 74001-970
 
 **Phone Number**: +55 (62) 3521-1208
 
-## Publications  <a href="https://dblp.org/pid/173/9154.html">DBLP</a>
+## <p id="Publications">Publications</a>  <a href="https://dblp.org/pid/173/9154.html">DBLP</a>
 
 ### 2021
 
-## <p id="Teaching">Courses and Tutorials</p> # none
+## <p id="Teaching">Courses and Tutorials</p> # none|
