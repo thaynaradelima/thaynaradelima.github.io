@@ -1,4 +1,4 @@
-![]images/photo_1.jpg
+![]foto.jpg
 
 ### Research Interest
 
