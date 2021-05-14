@@ -17,12 +17,78 @@ Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
 
 CEP: 74001-970
 
+Instituto de Matemática e Estatística - Universidade Federal de Goiás
+
+Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
+
+CEP: 74001-970
+
+Instituto de Matemática e Estatística - Universidade Federal de Goiás
+
+Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
+
+CEP: 74001-970
+
+Instituto de Matemática e Estatística - Universidade Federal de Goiás
+
+Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
+
+CEP: 74001-970
+
+Instituto de Matemática e Estatística - Universidade Federal de Goiás
+
+Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
+
+CEP: 74001-970
+
+Instituto de Matemática e Estatística - Universidade Federal de Goiás
+
+Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
+
+CEP: 74001-970
+
+Instituto de Matemática e Estatística - Universidade Federal de Goiás
+
+Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
+
+CEP: 74001-970
+
+Instituto de Matemática e Estatística - Universidade Federal de Goiás
+
+Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
+
+CEP: 74001-970
+
+Instituto de Matemática e Estatística - Universidade Federal de Goiás
+
+Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
+
+CEP: 74001-970
+
+Instituto de Matemática e Estatística - Universidade Federal de Goiás
+
+Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
+
+CEP: 74001-970
+
+Instituto de Matemática e Estatística - Universidade Federal de Goiás
+
+Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
+
+CEP: 74001-970
+
+Instituto de Matemática e Estatística - Universidade Federal de Goiás
+
+Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
+
+CEP: 74001-970
+
 ## Contact
 **E-mail**: thaynaradelima@ufg.br
 
 **Phone Number**: +55 (62) 3521-1208
 
-## <p id="Publications">Publications</p> # <a href="https://dblp.org/pid/173/9154.html">DBLP</a>
+## Publications  <a href="https://dblp.org/pid/173/9154.html">DBLP</a>
 
 ### 2021
 
