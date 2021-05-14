@@ -1,4 +1,4 @@
-![](foto.jpg)
+![](foto.jpg =10x10)
 
 ### Research Interest
 
