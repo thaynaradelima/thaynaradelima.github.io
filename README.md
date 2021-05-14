@@ -4,14 +4,20 @@ You can use the [editor on GitHub](https://github.com/thaynaradelima/thaynaradel
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Contact
-```
-Instituto de Matemática e Estatística - Universidade Federal de Goiás
-Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
-CEP: 74001-970
-**e-mail**: thaynaradelima@gmail.com 
+### Address
 
-```
+Instituto de Matemática e Estatística - Universidade Federal de Goiás
+
+Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
+
+CEP: 74001-970
+
+### Contact
+
+**Phone Number**: +55 (62) 3521-1208
+
+**E-mail**: thaynaradelima@gmail.com 
+
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
