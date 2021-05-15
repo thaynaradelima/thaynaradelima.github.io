@@ -1,4 +1,4 @@
-# Publications ([<img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:2em;margin-right:.5em;" alt="ORCID iD icon">](https://orcid.org/0000-0002-0852-9086), [DBLP](https://dblp.org/pid/173/9154.html) )
+# Publications ([<img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:2em;margin-right:.5em;" alt="ORCID iD icon">](https://orcid.org/0000-0002-0852-9086), [<img src="DBLP_logo.png" style="width:.5em;margin-right:.5em;" alt="DBLP logo">](https://dblp.org/pid/173/9154.html) )
 
 
 ## Work in progress
