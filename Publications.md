@@ -33,8 +33,7 @@
 			Mathematicians*. [In
 			Proceedings 9th International Workshop
 			on Theorem Prover Components for Educational
-  			Software (ThEdu)] 
-		      (https://www.uc.pt/en/congressos/thedu/thedu20/), 2020, 
+  			Software (ThEdu)](https://www.uc.pt/en/congressos/thedu/thedu20/), 2020, 
 		      [doi](https://dx.doi.org/10.4204/EPTCS.328.1) .
 			
 * L. A.  da Silveira, J. L. Soncco-&Aacute;lvarez, T. A. de Lima,
