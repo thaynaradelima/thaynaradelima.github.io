@@ -18,7 +18,7 @@ Campus Samambaia - R. Jacarandá - Chácaras Califórnia, Goiânia - GO
 CEP: 74001-970
 
 ## Contact
-**E-mail**: thaynaradelima@ufg.br
+**E-mail**: thaynaradelima(at)ufg.br
 
 **Phone Number**: +55 (62) 3521-1208
 
