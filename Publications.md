@@ -1,6 +1,4 @@
----
-layout: default
----
+
 # T.A. de Lima Publications
 
 ### See also [DBLP](dd), [MathGenealogy](ddd), [Orcid](dddd)
