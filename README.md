@@ -1,4 +1,4 @@
-| <img src="foto.jpg" alt="drawing" width="100"/> | **<font size="+2">Thaynara Arielly de Lima</font>**<br>Assistant Professor<br>Universidade Federal de Goiás |
+| <img src="foto.jpg" alt="drawing" width="100"/> | **<font size="+2">Thaynara Arielly de Lima</font>**<br>Assistant Professor<br>Instituto de Matemática e Estatística<br>Universidade Federal de Goiás |
 
 [Computer Science](http://www.cic.unb.br) 
 <br>
