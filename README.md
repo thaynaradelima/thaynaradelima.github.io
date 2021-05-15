@@ -1,8 +1,8 @@
 | <img src="foto.jpg" alt="drawing" width="100"/> | **<font size="+2">Thaynara Arielly de Lima</font>**<br>Assistant Professor<br>Universidade Federal de Goiás |
 
-<a href="http://www.cic.unb.br">Computer Science</a> 
+[Computer Science](http://www.cic.unb.br) 
 <br>
-| <a href="Publications.html">More on Publications</a> |
+| [Publications](Publications.html) |
 
 ## Research Interest
 
