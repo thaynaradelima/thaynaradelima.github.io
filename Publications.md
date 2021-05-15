@@ -1,7 +1,7 @@
 
 # T.A. de Lima Publications
 
-### See also [DBLP](dd), [MathGenealogy](ddd), [Orcid](dddd)
+### See also [DBLP](https://dblp.org/pid/173/9154.html), [Orcid](https://orcid.org/0000-0002-0852-9086)
 
 
 
