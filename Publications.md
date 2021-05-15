@@ -1,8 +1,21 @@
-# Publications ([<img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">](https://orcid.org/0000-0002-0852-9086), [<img src="DBLP_logo.png" style="width:3em;margin-right:.5em;" alt="DBLP logo">](https://dblp.org/pid/173/9154.html) )
+# Publications ([<img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:.8em;margin-right:.5em;" alt="ORCID iD icon">](https://orcid.org/0000-0002-0852-9086), [<img src="DBLP_logo.png" style="width:4em;margin-right:.5em;" alt="DBLP logo">](https://dblp.org/pid/173/9154.html) )
 
 
 ## Work in progress
 
+* L. A. da Silveira, T. A. de Lima, J. L. Soncco-Álvarez, and M. Ayala-Rincón. *Comparing Synchronous and Asynchronous Heterogeneous Parallel Island Models.* In preparation 2021. See pdf and source at [genoma site](http://genoma.cic.unb.br). 
+
+  
+*  L. A.  da Silveira, J. L. Soncco-Álvarez,  J. de Barros,
+                        T. A. de Lima, C. H.   Llanos,
+                        and M. Ayala-Rincón. *On The Behaviour of Parallel
+                        Island Models Genetic Algorithms.* Submitted 2020. See
+                        pdf and source at [genoma site](http://genoma.cic.unb.br).
+			
+
+## Published works
+
+### 2021 
 
 * T. A. de Lima, A. L. Galdino, A. Borges Avelar, and
 			M. Ayala-Rincón. *Formalization of
@@ -11,15 +24,6 @@
 			Remainder Theorem.*  Online Fist, Journal of Automated Reasoning,  [doi](https://doi.org/10.1007/s10817-021-09593-0),  2021.  
   
 
-  
-*  L. A.  da Silveira, J. L. Soncco-Álvarez,  J. de Barros,
-                        T. A. de Lima, C. H.   Llanos,
-                        and M. Ayala-Rincón. *On The Behaviour of Parallel
-                        Island Models Genetic Algorithms*. Submitted 2020. See
-                        pdf and source at [genoma site](http://genoma.cic.unb.br), 
-			
-
-## Published works
 
 ### 2020
 
