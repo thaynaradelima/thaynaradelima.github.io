@@ -1,9 +1,5 @@
 | <img src="foto.jpg" alt="drawing" width="100"/> | **<font size="+2">Thaynara Arielly de Lima</font>**<br>Assistant Professor<br>Instituto de Matemática e Estatística<br>Universidade Federal de Goiás |
 
-[Computer Science](http://www.cic.unb.br) 
-<br>
-| [Publications](Publications.html) |
- | [My publications](MYpubs.md) |
 
 ## Research Interest
 
@@ -23,4 +19,7 @@ CEP: 74001-970
 
 **Phone Number**: +55 (62) 3521-1208
 
+| [IME/UFG](http://www.ime.ufg.br) |
+| [Publications](Publications.html) |
+ | [My publications](Publications.md) |
 
