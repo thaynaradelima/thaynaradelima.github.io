@@ -73,8 +73,7 @@ and M. Ayala-Rincón. *Behaviour of Bioinspired Algorithms
 Extended abstract presented at  <a href="http://www.lix.polytechnique.fr/pp2013/index.php?page=program">Permutation Patterns 2013</a>, Paris, 2013. 
 
   
- * T.A. de Lima and  M. Ayala-Rincón. *NP-Completeness of Sorting Unsigned Permutations by Reversals*.   
-   Note MAT/UnB [pdf](http://ayala.mat.unb.br/reversals_np.pdf)", Brasília, 2013.
+ * T.A. de Lima and  M. Ayala-Rincón. *NP-Completeness of Sorting Unsigned Permutations by Reversals*. Note MAT/UnB [pdf](http://ayala.mat.unb.br/reversals_np.pdf)", Brasília, 2013.
 
 ### 2012
 
