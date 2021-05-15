@@ -52,7 +52,7 @@ and M. Ayala-Rincón. *Behaviour of Bioinspired Algorithms
   M. Ayala-Rincón. *Parallel Multi-Island Genetic
   Algorithms for Sorting Unsigned Genomes by
   Reversals*. In Proceedings Congress on
-  Evolutionary Computation [CEC 2018](http://www.ecomp.poli.br/~wcci2018">2018).Extended version at [genoma site])(http://genoma.cic.unb.br). 
+  Evolutionary Computation [CEC 2018](http://www.ecomp.poli.br/~wcci2018).Extended version at [genoma site](http://genoma.cic.unb.br). 
   [doi](https://doi.org/10.1109/CEC.2018.8477968).
 
 * T.A. de Lima and  M. Ayala-Rincón.*On the average number of reversals needed to sort signed permutations*. Discrete Applied Mathematic 235:59-80.[doi](https://doi.org/10.1016/j.dam.2017.09.014), 2018. 
@@ -60,11 +60,10 @@ and M. Ayala-Rincón. *Behaviour of Bioinspired Algorithms
 
 ### 2015
 
-* L.A. da Silveira, J.L. Soncco-Álvarez, T.A. de Lima and  M. Ayala-Rincón.*Memetic and Opposition-Based Learning Genetic Algorithms for Sorting Unsigned Genomes by Translocations*.
-   <a href="memetic_oblGA20150716.pdf">PDF</a>, <a href="mem_obl_GAutd.tgz">C code</a>, Proc. NaBIC 2015 (Vol.419, series Advances in Intelligent Systems and Computing pp 73-85, 2016). <a href="http://dx.doi.org/10.1007/978-3-319-27400-3_7">(doi)</a>.  
+* L.A. da Silveira, J.L. Soncco-Álvarez, T.A. de Lima and  M. Ayala-Rincón.*Memetic and Opposition-Based Learning Genetic Algorithms for Sorting Unsigned Genomes by Translocations*.Proc. NaBIC 2015 (Vol.419, series Advances in Intelligent Systems and Computing pp 73-85, 2016). <a href="http://dx.doi.org/10.1007/978-3-319-27400-3_7">(doi)</a>.  
    
 * L.A. da Silveira, J.L. Soncco-&Aacute;lvarez, T.A. de Lima and  M. Ayala-Rinc&oacute;n <cite>Computing Translocation Distance by a Genetic Algorithm</cite>.
-  <a href="GAforUnsTransDisti20150517.pdf">PDF</a>, <a href="GAutd.tgz">C code</a>, IEEE Xplore Proceedings CLEI 2015. <a href="http://dx.doi.org/10.1109/CLEI.2015.7359994">(doi)</a>.    
+  IEEE Xplore Proceedings CLEI 2015. <a href="http://dx.doi.org/10.1109/CLEI.2015.7359994">(doi)</a>.    
   
 ### 2013
   
@@ -77,7 +76,7 @@ Extended abstract presented at  <a href="http://www.lix.polytechnique.fr/pp2013/
 
 ### 2012
 
-* T.A. de Lima and  M. Ayala-Rinc&oacute;n <cite>Complexity of Reversal Distance and other General Metrics on Permutation Groups</cite>, <A HREF="shortw4v2.pdf">PDF</A>. 
+* T.A. de Lima and  M. Ayala-Rinc&oacute;n <cite>Complexity of Reversal Distance and other General Metrics on Permutation Groups</cite>. 
 7CCC 2012. (<a href="http://dx.doi.org/10.1109/ColombianCC.2012.6398020 ">(doi)</a>)  
   
 
