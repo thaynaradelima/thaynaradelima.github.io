@@ -21,7 +21,7 @@
                         pdf and source at [genoma site](http://genoma.cic.unb.br), 
 			
 
-## Published works (by year)
+## Published works
 
 ### 2020
 
