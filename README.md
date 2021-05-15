@@ -20,6 +20,6 @@ CEP: 74001-970
 **Phone Number**: +55 (62) 3521-1208
 
 
-| [IME/UFG](http://www.ime.ufg.br) | [Publications](Publications.md) |
+| [IME/UFG](http://www.ime.ufg.br) | [EA Sorting Genomes](http://http://genoma.cic.unb.br) |
 
 
