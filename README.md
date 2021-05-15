@@ -3,6 +3,7 @@
 [Computer Science](http://www.cic.unb.br) 
 <br>
 | [Publications](Publications.html) |
+ | [My publications](MYpubs.md) |
 
 ## Research Interest
 
