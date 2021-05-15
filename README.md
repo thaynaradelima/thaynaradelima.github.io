@@ -1,4 +1,4 @@
-| <img src="foto.jpg" alt="drawing" width="100"/> | **<font size="+2">Thaynara Arielly de Lima</font>**<br>Assistant Professor<br>Instituto de Matemática e Estatística<br>Universidade Federal de Goiás |
+| <img src="foto.jpg" alt="drawing" width="100"/> | **<font size="+2">Thaynara Arielly de Lima</font>**<br>Assistant Professor<br>Instituto de Matemática e Estatística (IME/UFG)<br>Universidade Federal de Goiás |
 
 
 ## Research Interest
@@ -18,6 +18,7 @@ CEP: 74001-970
 **E-mail**: thaynaradelima(at)ufg.br
 
 **Phone Number**: +55 (62) 3521-1208
+
 
 | [IME/UFG](http://www.ime.ufg.br) | [Publications](Publications.md) |
 
