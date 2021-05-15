@@ -76,7 +76,7 @@ Extended abstract presented at  <a href="http://www.lix.polytechnique.fr/pp2013/
 
 ### 2012
 
-* T.A. de Lima and  M. Ayala-Rinc&oacute;n <cite>Complexity of Reversal Distance and other General Metrics on Permutation Groups</cite>. 
-7CCC 2012. (<a href="http://dx.doi.org/10.1109/ColombianCC.2012.6398020 ">(doi)</a>), 2012.  
+* T.A. de Lima and  M. Ayala-Rinc&oacute;n.*Complexity of Reversal Distance and other General Metrics on Permutation Groups*. 
+7CCC 2012, [doi](http://dx.doi.org/10.1109/ColombianCC.2012.6398020), 2012.  
   
 
