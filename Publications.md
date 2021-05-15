@@ -1,5 +1,5 @@
 
-# T.A. de Lima Publications
+# Publications
 
 ### See also [DBLP](https://dblp.org/pid/173/9154.html), [Orcid](https://orcid.org/0000-0002-0852-9086)
 
