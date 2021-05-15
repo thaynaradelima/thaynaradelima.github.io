@@ -19,7 +19,6 @@ CEP: 74001-970
 
 **Phone Number**: +55 (62) 3521-1208
 
-| [IME/UFG](http://www.ime.ufg.br) |
-| [Publications](Publications.html) |
- | [My publications](Publications.md) |
+| [IME/UFG](http://www.ime.ufg.br)<br>[Publications](Publications.md) |
+
 
