@@ -17,7 +17,7 @@ layout: default
   
   
  * T.A. de Lima and  M. Ayala-Rincón *NP-Completeness of Sorting Unsigned Permutations by Reversals*.   
-   Note MAT/UnB [pdf](https://ayala.mat.unb.br/reversals_np.pdf)", Brasília, 2013.
+   Note MAT/UnB [pdf](http://ayala.mat.unb.br/reversals_np.pdf)", Brasília, 2013.
 
 
 *  L. A.  da Silveira, J. L. Soncco-Álvarez,  J. de Barros,
