@@ -52,6 +52,9 @@ and M. Ayala-Rincón. *Behaviour of Bioinspired Algorithms
   
 ### 2018
 
+* A. B. Avelar da Silva, T. A. de Lima, A. L. Galdino. *Formalizing Ring Theory in PVS*. [ITP 2018](https://itp2018.inria.fr): 40-47, 
+[doi](https://doi.org/10.1007/978-3-319-94821-8_3), 2018. 
+
 * L.A. da Silveira, J.L. Soncco-Álvarez, T.A. de Lima and
   M. Ayala-Rincón. *Parallel Multi-Island Genetic
   Algorithms for Sorting Unsigned Genomes by
