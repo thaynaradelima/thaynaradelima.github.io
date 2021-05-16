@@ -1,7 +1,7 @@
 # Publications 
-
+<center>
 | [<img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:.8em;margin-right:.5em;" alt="ORCID iD icon">](https://orcid.org/0000-0002-0852-9086) | [<img src="DBLP_logo.png" style="width:4em;margin-right:.5em;" alt="DBLP logo">](https://dblp.org/pid/173/9154.html) |
-
+</center>
 
 ## Work in progress
 
