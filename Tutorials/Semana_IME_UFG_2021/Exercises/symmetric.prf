@@ -1,0 +1,1575 @@
+(symmetric
+ (IMP_pred_algebra_TCC1 0
+  (IMP_pred_algebra_TCC1-1 nil 3788880059
+   ("" (existence-tcc)
+    (("" (inst 1 "LAMBDA(i : below[n]) : i") nil nil)) nil)
+   ((below type-eq-decl nil nat_types nil)
+    (n formal-const-decl "posnat" symmetric nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (< const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil))
+   nil))
+ (group_symmetric 0
+  (group_symmetric-1 nil 3788715028
+   ("" (expand "group?")
+    (("" (split)
+      (("1" (expand "closed?")
+        (("1" (skeep)
+          (("1" (typepred "x" "y")
+            (("1" (expand "symmetric" (-1 -2))
+              (("1"
+                (lemma
+                 "composition_bijective[below[n],below[n],below[n]]")
+                (("1" (inst -1 "y" "x")
+                  (("1" (expand "member")
+                    (("1" (expand "symmetric") (("1" (assert) nil nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil)
+       ("2" (expand "associative?")
+        (("2" (skeep)
+          (("2" (expand "restrict")
+            (("2" (lemma "the_lem[nat]")
+              (("2" (hide -)
+                (("2" (lemma "assoc")
+                  (("2" (inst -1 "z" "y" "x") nil nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil)
+       ("3" (expand "member")
+        (("3" (expand "symmetric")
+          (("3" (expand "bijective?")
+            (("3" (split)
+              (("1" (expand "injective?") (("1" (skeep) nil nil)) nil)
+               ("2" (expand "surjective?")
+                (("2" (skeep) (("2" (inst 1 "y") nil nil)) nil)) nil))
+              nil))
+            nil))
+          nil))
+        nil)
+       ("4" (expand "identity?")
+        (("4" (skeep)
+          (("4" (expand "restrict")
+            (("4" (split)
+              (("1" (expand "o ") (("1" (decompose-equality) nil nil))
+                nil)
+               ("2" (decompose-equality)
+                (("2" (expand "o ") (("2" (propax) nil nil)) nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil)
+       ("5" (expand "inv_exists?")
+        (("5" (skeep)
+          (("5" (inst 1 "inverse(x)")
+            (("1" (split)
+              (("1" (expand "o ")
+                (("1" (decompose-equality)
+                  (("1" (rewrite "comp_inverse_right")
+                    (("1" (hide 2)
+                      (("1" (typepred "x")
+                        (("1" (expand "symmetric")
+                          (("1" (propax) nil nil)) nil))
+                        nil))
+                      nil)
+                     ("2" (inst 1 "0") nil nil))
+                    nil)
+                   ("2" (skeep) (("2" (inst 1 "0") nil nil)) nil))
+                  nil))
+                nil)
+               ("2" (expand "o ")
+                (("2" (decompose-equality)
+                  (("1" (rewrite "comp_inverse_left")
+                    (("1" (hide 2)
+                      (("1" (typepred "x")
+                        (("1" (expand "symmetric")
+                          (("1" (propax) nil nil)) nil))
+                        nil))
+                      nil)
+                     ("2" (inst 1 "0") nil nil))
+                    nil)
+                   ("2" (skeep) (("2" (inst 1 "0") nil nil)) nil))
+                  nil))
+                nil))
+              nil)
+             ("2" (expand "symmetric")
+              (("2" (typepred "x")
+                (("2" (expand "symmetric")
+                  (("2" (rewrite "bij_inv_is_bij")
+                    (("2" (inst 1 "0")
+                      (("2" (typepred "n") (("2" (assert) nil nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("3" (inst 1 "0") (("3" (assert) nil nil)) nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((group? const-decl "bool" pred_algebra nil)
+    (inv_exists? const-decl "bool" pred_algebra nil)
+    (TRUE const-decl "bool" booleans nil)
+    (x skolem-const-decl "(symmetric)" symmetric nil)
+    (inverse const-decl "D" function_inverse nil)
+    (comp_inverse_left formula-decl nil function_inverse nil)
+    (comp_inverse_right formula-decl nil function_inverse nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (bij_inv_is_bij formula-decl nil function_inverse nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (identity? const-decl "bool" operator_defs nil)
+    (O const-decl "T3" function_props nil)
+    (bijective? const-decl "bool" functions nil)
+    (surjective? const-decl "bool" functions nil)
+    (injective? const-decl "bool" functions nil)
+    (associative? const-decl "bool" operator_defs nil)
+    (restrict const-decl "R" restrict nil)
+    (assoc formula-decl nil function_props2 nil)
+    (the_lem formula-decl nil sets nil)
+    (closed? const-decl "bool" pred_algebra nil)
+    (symmetric const-decl "set[[below[n] -> below[n]]]" symmetric nil)
+    (set type-eq-decl nil sets nil)
+    (below type-eq-decl nil nat_types nil)
+    (n formal-const-decl "posnat" symmetric nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (< const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (composition_bijective formula-decl nil func_composition
+     "finite_sets/")
+    (member const-decl "bool" sets nil))
+   shostak))
+ (sym_gt2_notabelian 0
+  (sym_gt2_notabelian-1 nil 3788776990
+   ("" (flatten)
+    (("" (expand "abelian_group?")
+      (("" (flatten)
+        (("" (expand "commutative?")
+          ((""
+            (inst -3 "(LAMBDA (i:below[n]) : IF i>=2 THEN i ELSIF
+                 i = 0 THEN 1 ELSE 0 ENDIF)"
+             "(LAMBDA (i:below[n]) : IF i>=3 THEN i ELSIF
+                 i = 0 THEN 2 ELSIF i = 1 THEN 1 ELSE 0 ENDIF)")
+            (("1" (expand "restrict")
+              (("1" (decompose-equality)
+                (("1" (inst -1 "0")
+                  (("1" (grind) nil nil) ("2" (assert) nil nil)) nil))
+                nil))
+              nil)
+             ("2" (expand "symmetric")
+              (("2" (expand "bijective?")
+                (("2" (split)
+                  (("1" (expand "injective?")
+                    (("1" (skeep)
+                      (("1" (hide -3) (("1" (grind) nil nil)) nil))
+                      nil))
+                    nil)
+                   ("2" (expand "surjective?")
+                    (("2" (skeep)
+                      (("2"
+                        (inst 1
+                         " IF y >= 3 THEN y ELSIF y = 0 THEN 2 ELSIF y = 1 THEN 1 ELSE 0 ENDIF")
+                        (("1" (assert)
+                          (("1" (hide -2) (("1" (grind) nil nil)) nil))
+                          nil)
+                         ("2" (assert) nil nil) ("3" (assert) nil nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("3" (skeep) (("3" (assert) nil nil)) nil)
+             ("4" (skeep) (("4" (assert) nil nil)) nil)
+             ("5" (expand "symmetric")
+              (("5" (expand "bijective?")
+                (("5" (split)
+                  (("1" (expand "injective?")
+                    (("1" (skeep)
+                      (("1" (hide -3)
+                        (("1" (assert) (("1" (grind) nil nil)) nil))
+                        nil))
+                      nil))
+                    nil)
+                   ("2" (hide -2)
+                    (("2" (expand "surjective?")
+                      (("2" (skeep)
+                        (("2"
+                          (inst 1
+                           "IF y >= 2 THEN y ELSIF y = 0 THEN 1 ELSE 0 ENDIF")
+                          (("1" (grind) nil nil)
+                           ("2" (assert) nil nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("6" (skeep) (("6" (assert) nil nil)) nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((abelian_group? const-decl "bool" pred_algebra nil)
+    (commutative? const-decl "bool" operator_defs nil)
+    (y skolem-const-decl "below[n]" symmetric nil)
+    (injective? const-decl "bool" functions nil)
+    (y skolem-const-decl "below[n]" symmetric nil)
+    (surjective? const-decl "bool" functions nil)
+    (bijective? const-decl "bool" functions nil)
+    (restrict const-decl "R" restrict nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (O const-decl "T3" function_props nil)
+    (set type-eq-decl nil sets nil)
+    (symmetric const-decl "set[[below[n] -> below[n]]]" symmetric nil)
+    (naturalnumber type-eq-decl nil naturalnumbers nil)
+    (IF const-decl "[boolean, T, T -> T]" if_def nil)
+    (number nonempty-type-decl nil numbers nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (>= const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (n formal-const-decl "posnat" symmetric nil)
+    (below type-eq-decl nil nat_types nil)
+    (IMPLIES const-decl "[bool, bool -> bool]" booleans nil)
+    (AND const-decl "[bool, bool -> bool]" booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (NOT const-decl "[bool -> bool]" booleans nil))
+   shostak))
+ (sym_cyc_lt2 0
+  (sym_cyc_lt2-1 nil 3788784639
+   ("" (flatten)
+    (("" (lemma "cyc_abel")
+      (("" (inst -1 "symmetric")
+        (("" (assert) (("" (rewrite "sym_gt2_notabelian") nil nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((O const-decl "T3" function_props nil)
+    (below type-eq-decl nil nat_types nil)
+    (n formal-const-decl "posnat" symmetric nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (< const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (cyc_abel formula-decl nil pred_algebra nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (sym_gt2_notabelian formula-decl nil symmetric nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (symmetric const-decl "set[[below[n] -> below[n]]]" symmetric nil)
+    (set type-eq-decl nil sets nil))
+   shostak))
+ (symmetric_is_finite 0
+  (symmetric_is_finite-1 nil 3789490370
+   ("" (lemma "finite_funset_bijection2")
+    (("" (inst -1 "fullset[below[n]]" "fullset[below[n]]" "n" "n")
+      (("1" (prop)
+        (("1" (expand "is_finite")
+          (("1" (skeep)
+            (("1" (inst 1 "n^n" "LAMBDA(s:(symmetric)) : f(s)")
+              (("1" (expand "restrict")
+                (("1" (expand "bijective?")
+                  (("1" (flatten)
+                    (("1" (hide -2)
+                      (("1" (expand "injective?")
+                        (("1" (skeep)
+                          (("1" (inst -1 "x1" "x2")
+                            (("1" (expand "restrict")
+                              (("1"
+                                (prop)
+                                (("1"
+                                  (hide -2)
+                                  (("1"
+                                    (decompose-equality 1)
+                                    (("1"
+                                      (decompose-equality -1)
+                                      (("1"
+                                        (inst -1 "x!1")
+                                        (("1"
+                                          (expand "fullset")
+                                          (("1" (propax) nil nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil)
+                             ("2" (skeep)
+                              (("2"
+                                (typepred "x1!1")
+                                (("2"
+                                  (typepred "x2")
+                                  (("2"
+                                    (expand "fullset")
+                                    (("2" (propax) nil nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil)
+                             ("3" (skeep)
+                              (("3"
+                                (expand "fullset")
+                                (("3" (propax) nil nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil)
+               ("2" (skeep)
+                (("2" (skeep)
+                  (("2" (expand "fullset") (("2" (propax) nil nil))
+                    nil))
+                  nil))
+                nil)
+               ("3" (assert)
+                (("3" (flatten) (("3" (assert) nil nil)) nil)) nil))
+              nil))
+            nil))
+          nil)
+         ("2" (hide 2)
+          (("2" (lemma "card_bij[below[n]]")
+            (("2" (inst -1 "n" "fullset[below[n]]")
+              (("2" (assert)
+                (("2" (hide 2)
+                  (("2" (inst 1 "LAMBDA(i:below[n]) : i")
+                    (("2" (expand "restrict")
+                      (("2" (expand "bijective?")
+                        (("2" (grind) nil nil)) nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil)
+         ("3" (lemma "card_bij[below[n]]")
+          (("3" (inst -1 "n" "fullset[below[n]]")
+            (("3" (assert)
+              (("3" (inst 1 "LAMBDA(i:below[n]) : i")
+                (("3" (hide 2 3) (("3" (grind) nil nil)) nil)) nil))
+              nil))
+            nil))
+          nil))
+        nil)
+       ("2" (hide 2)
+        (("2" (expand "is_finite")
+          (("2" (inst 1 "n" "LAMBDA(i:below[n]) : i")
+            (("2" (grind) nil nil)) nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((fullset const-decl "set" sets nil)
+    (is_finite const-decl "bool" finite_sets nil)
+    (set type-eq-decl nil sets nil)
+    (finite_set type-eq-decl nil finite_sets nil)
+    (real_lt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (surjective? const-decl "bool" functions nil)
+    (card_bij formula-decl nil finite_sets nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (posint_exp application-judgement "posint" exponentiation nil)
+    (OR const-decl "[bool, bool -> bool]" booleans nil)
+    (/= const-decl "boolean" notequal nil)
+    (symmetric const-decl "set[[below[n] -> below[n]]]" symmetric nil)
+    (^ const-decl "real" exponentiation nil)
+    (restrict const-decl "R" restrict nil)
+    (bijective? const-decl "bool" functions nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (x!1 skolem-const-decl "below[n]" symmetric nil)
+    (x2 skolem-const-decl "(symmetric)" symmetric nil)
+    (x1 skolem-const-decl "(symmetric)" symmetric nil)
+    (injective? const-decl "bool" functions nil)
+    (finite_funset_bijection2 formula-decl nil set_of_functions
+     "sets_aux/")
+    (number nonempty-type-decl nil numbers nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (>= const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (n formal-const-decl "posnat" symmetric nil)
+    (below type-eq-decl nil nat_types nil))
+   shostak))
+ (symmetric_is_torsion 0
+  (symmetric_is_torsion-1 nil 3789207561
+   ("" (lemma "finite_torsion")
+    (("" (inst -1 "symmetric")
+      (("1" (assert) (("1" (rewrite "symmetric_is_finite") nil nil))
+        nil)
+       ("2" (rewrite "group_symmetric") nil nil))
+      nil))
+    nil)
+   ((symmetric const-decl "set[[below[n] -> below[n]]]" symmetric nil)
+    (group? const-decl "bool" pred_algebra nil)
+    (set type-eq-decl nil sets nil)
+    (symmetric_is_finite formula-decl nil symmetric nil)
+    (group_symmetric formula-decl nil symmetric nil)
+    (finite_torsion formula-decl nil pred_algebra nil)
+    (number nonempty-type-decl nil numbers nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (>= const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (n formal-const-decl "posnat" symmetric nil)
+    (below type-eq-decl nil nat_types nil)
+    (O const-decl "T3" function_props nil))
+   shostak))
+ (power_set_subgroup_sym_TCC1 0
+  (power_set_subgroup_sym_TCC1-1 nil 3788796996
+   ("" (skeep) (("" (rewrite "group_symmetric") nil nil)) nil)
+   ((group_symmetric formula-decl nil symmetric nil)) nil))
+ (power_set_subgroup_sym 0
+  (power_set_subgroup_sym-2 nil 3788885073
+   ("" (skeep)
+    (("" (expand "subgroup?")
+      (("" (split)
+        (("1" (expand "subset?")
+          (("1" (skeep)
+            (("1" (typepred "y")
+              (("1" (expand "member")
+                (("1" (expand "power_set")
+                  (("1" (skeep)
+                    (("1" (lemma "power_closed")
+                      (("1" (inst -1 "symmetric" "y" "n!1")
+                        (("1" (assert)
+                          (("1" (expand "member")
+                            (("1" (assert) nil nil)) nil))
+                          nil)
+                         ("2" (hide 2)
+                          (("2" (rewrite "group_symmetric") nil nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil)
+         ("2" (expand "group?")
+          (("2" (split)
+            (("1" (expand "closed?")
+              (("1" (skeep)
+                (("1" (typepred "x" "y_1")
+                  (("1" (expand "power_set")
+                    (("1" (skeep*)
+                      (("1" (expand "member")
+                        (("1" (inst 1 "n!1 + n!2")
+                          (("1" (lemma "power_add")
+                            (("1" (inst -1 "symmetric" "y" "n!1" "n!2")
+                              (("1" (assert) nil nil)
+                               ("2"
+                                (rewrite "group_symmetric")
+                                nil
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("2" (expand "associative?")
+              (("2" (skeep)
+                (("2" (expand "restrict")
+                  (("2" (lemma "group_symmetric")
+                    (("2" (expand "group?")
+                      (("2" (flatten)
+                        (("2" (hide-all-but (-2 1))
+                          (("2" (expand "associative?")
+                            (("2" (inst -1 "x" "y!1" "z")
+                              (("1"
+                                (expand "restrict")
+                                (("1" (propax) nil nil))
+                                nil)
+                               ("2"
+                                (hide 2)
+                                (("2"
+                                  (typepred "z")
+                                  (("2"
+                                    (expand "power_set")
+                                    (("2"
+                                      (skeep)
+                                      (("2"
+                                        (lemma "power_closed")
+                                        (("2"
+                                          (inst
+                                           -1
+                                           "symmetric"
+                                           "y"
+                                           "n!1")
+                                          (("1"
+                                            (expand "member")
+                                            (("1" (assert) nil nil))
+                                            nil)
+                                           ("2"
+                                            (rewrite "group_symmetric")
+                                            nil
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("3"
+                                (hide 2)
+                                (("3"
+                                  (typepred "y!1")
+                                  (("3"
+                                    (expand "power_set")
+                                    (("3"
+                                      (skeep)
+                                      (("3"
+                                        (lemma "power_closed")
+                                        (("3"
+                                          (inst
+                                           -1
+                                           "symmetric"
+                                           "y"
+                                           "n!1")
+                                          (("1"
+                                            (expand "member")
+                                            (("1" (assert) nil nil))
+                                            nil)
+                                           ("2"
+                                            (rewrite "group_symmetric")
+                                            nil
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("4"
+                                (hide 2)
+                                (("4"
+                                  (typepred "x")
+                                  (("4"
+                                    (expand "power_set")
+                                    (("4"
+                                      (skeep)
+                                      (("4"
+                                        (lemma "power_closed")
+                                        (("4"
+                                          (inst
+                                           -1
+                                           "symmetric"
+                                           "y"
+                                           "n!1")
+                                          (("1"
+                                            (expand "member")
+                                            (("1" (assert) nil nil))
+                                            nil)
+                                           ("2"
+                                            (rewrite "group_symmetric")
+                                            nil
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("3" (expand "member")
+              (("3" (expand "power_set")
+                (("3" (inst 1 "0")
+                  (("3" (expand "^") (("3" (propax) nil nil)) nil))
+                  nil))
+                nil))
+              nil)
+             ("4" (expand "identity?")
+              (("4" (skeep)
+                (("4" (expand "restrict")
+                  (("4" (split)
+                    (("1" (decompose-equality)
+                      (("1" (expand "o ") (("1" (propax) nil nil))
+                        nil))
+                      nil)
+                     ("2" (decompose-equality)
+                      (("2" (expand "o ") (("2" (propax) nil nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("5" (expand "inv_exists?")
+              (("5" (skeep)
+                (("5" (typepred "x")
+                  (("5" (expand "power_set")
+                    (("5" (skeep)
+                      (("5" (lemma "symmetric_is_torsion")
+                        (("5" (expand "torsion?")
+                          (("5" (flatten)
+                            (("5" (hide -1)
+                              (("5"
+                                (inst -1 "y^n!1")
+                                (("1"
+                                  (skeep)
+                                  (("1"
+                                    (case-replace "n!2 = 1")
+                                    (("1"
+                                      (expand "^" -2 2)
+                                      (("1"
+                                        (expand "^" -2 3)
+                                        (("1"
+                                          (case-replace
+                                           "y ^ n!1 o (LAMBDA (i: below[n]): i) = y ^ n!1")
+                                          (("1"
+                                            (inst
+                                             1
+                                             "(LAMBDA (i: below[n]): i)")
+                                            (("1" (grind) nil nil)
+                                             ("2"
+                                              (expand "power_set")
+                                              (("2"
+                                                (inst 1 "0")
+                                                (("2"
+                                                  (expand "^")
+                                                  (("2"
+                                                    (propax)
+                                                    nil
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil)
+                                           ("2"
+                                            (hide 2)
+                                            (("2"
+                                              (decompose-equality)
+                                              (("2" (grind) nil nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil)
+                                     ("2"
+                                      (lemma "power_mult")
+                                      (("2"
+                                        (inst
+                                         -1
+                                         "symmetric"
+                                         "y"
+                                         "n!2"
+                                         "n!1")
+                                        (("1"
+                                          (replace -1 -2)
+                                          (("1"
+                                            (inst 2 "y^((n!2-1)*n!1)")
+                                            (("1"
+                                              (replace -3 2)
+                                              (("1"
+                                                (split)
+                                                (("1"
+                                                  (lemma "power_add")
+                                                  (("1"
+                                                    (inst
+                                                     -1
+                                                     "symmetric"
+                                                     "y"
+                                                     "n!1"
+                                                     "(n!2 - 1) * n!1")
+                                                    (("1"
+                                                      (assert)
+                                                      nil
+                                                      nil)
+                                                     ("2"
+                                                      (typepred
+                                                       "n!1"
+                                                       "n!2")
+                                                      (("2"
+                                                        (hide-all-but
+                                                         (-1 -2 1 3))
+                                                        (("2"
+                                                          (case
+                                                           "n!1 = 0")
+                                                          (("1"
+                                                            (assert)
+                                                            nil
+                                                            nil)
+                                                           ("2"
+                                                            (assert)
+                                                            (("2"
+                                                              (lemma
+                                                               " both_sides_times_pos_gt2")
+                                                              (("2"
+                                                                (inst
+                                                                 -1
+                                                                 "n!1"
+                                                                 "n!2"
+                                                                 "1")
+                                                                (("2"
+                                                                  (prop)
+                                                                  (("1"
+                                                                    (grind)
+                                                                    nil
+                                                                    nil)
+                                                                   ("2"
+                                                                    (assert)
+                                                                    nil
+                                                                    nil))
+                                                                  nil))
+                                                                nil))
+                                                              nil))
+                                                            nil))
+                                                          nil))
+                                                        nil))
+                                                      nil)
+                                                     ("3"
+                                                      (rewrite
+                                                       "group_symmetric")
+                                                      nil
+                                                      nil))
+                                                    nil))
+                                                  nil)
+                                                 ("2"
+                                                  (lemma "power_add")
+                                                  (("2"
+                                                    (inst
+                                                     -1
+                                                     "symmetric"
+                                                     "y"
+                                                     "(n!2 - 1) * n!1"
+                                                     "n!1")
+                                                    (("1"
+                                                      (assert)
+                                                      nil
+                                                      nil)
+                                                     ("2"
+                                                      (lemma
+                                                       " both_sides_times_pos_gt2")
+                                                      (("2"
+                                                        (inst
+                                                         -1
+                                                         "n!1"
+                                                         "n!2"
+                                                         "1")
+                                                        (("1"
+                                                          (assert)
+                                                          nil
+                                                          nil)
+                                                         ("2"
+                                                          (assert)
+                                                          nil
+                                                          nil))
+                                                        nil))
+                                                      nil)
+                                                     ("3"
+                                                      (rewrite
+                                                       "group_symmetric")
+                                                      nil
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil)
+                                             ("2"
+                                              (expand "power_set")
+                                              (("2"
+                                                (inst
+                                                 1
+                                                 "n!1 * n!2 - n!1")
+                                                (("2"
+                                                  (hide -)
+                                                  (("2"
+                                                    (typepred
+                                                     "n!1 "
+                                                     "n!2")
+                                                    (("2"
+                                                      (lemma
+                                                       " both_sides_times_pos_gt2")
+                                                      (("2"
+                                                        (inst
+                                                         -1
+                                                         "n!1"
+                                                         "n!2"
+                                                         "1")
+                                                        (("1"
+                                                          (assert)
+                                                          nil
+                                                          nil)
+                                                         ("2"
+                                                          (assert)
+                                                          nil
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil)
+                                             ("3"
+                                              (hide -)
+                                              (("3"
+                                                (typepred "n!1 " "n!2")
+                                                (("3"
+                                                  (lemma
+                                                   " both_sides_times_pos_gt2")
+                                                  (("3"
+                                                    (inst
+                                                     -1
+                                                     "n!1"
+                                                     "n!2"
+                                                     "1")
+                                                    (("1"
+                                                      (assert)
+                                                      nil
+                                                      nil)
+                                                     ("2"
+                                                      (assert)
+                                                      nil
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil)
+                                         ("2"
+                                          (rewrite "group_symmetric")
+                                          nil
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil)
+                                 ("2"
+                                  (hide -1 2)
+                                  (("2"
+                                    (lemma "power_closed")
+                                    (("2"
+                                      (inst -1 "symmetric" "y" "n!1")
+                                      (("1"
+                                        (expand "member")
+                                        (("1" (propax) nil nil))
+                                        nil)
+                                       ("2"
+                                        (rewrite "group_symmetric")
+                                        nil
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((subgroup? const-decl "bool" pred_algebra nil)
+    (inv_exists? const-decl "bool" pred_algebra nil)
+    (torsion? const-decl "bool" pred_algebra nil)
+    (power_mult formula-decl nil pred_algebra nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (both_sides_times_pos_gt2 formula-decl nil real_props nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (posreal nonempty-type-eq-decl nil real_types nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (n!2 skolem-const-decl "posnat" symmetric nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (mult_divides1 application-judgement "(divides(n))" divides nil)
+    (mult_divides2 application-judgement "(divides(m))" divides nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (n!1 skolem-const-decl "nat" symmetric nil)
+    (symmetric_is_torsion formula-decl nil symmetric nil)
+    (identity? const-decl "bool" operator_defs nil)
+    (^ def-decl "T" pred_algebra nil)
+    (associative? const-decl "bool" operator_defs nil)
+    (restrict const-decl "R" restrict nil)
+    (x skolem-const-decl "(power_set(y))" symmetric nil)
+    (y skolem-const-decl "(symmetric)" symmetric nil)
+    (y!1 skolem-const-decl "(power_set(y))" symmetric nil)
+    (z skolem-const-decl "(power_set(y))" symmetric nil)
+    (closed? const-decl "bool" pred_algebra nil)
+    (TRUE const-decl "bool" booleans nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (power_add formula-decl nil pred_algebra nil)
+    (subset? const-decl "bool" sets nil)
+    (symmetric const-decl "set[[below[n] -> below[n]]]" symmetric nil)
+    (set type-eq-decl nil sets nil)
+    (below type-eq-decl nil nat_types nil)
+    (n formal-const-decl "posnat" symmetric nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (< const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (>= const-decl "bool" reals nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number nonempty-type-decl nil numbers nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (power_set const-decl "set[T]" pred_algebra nil)
+    (power_closed formula-decl nil pred_algebra nil)
+    (O const-decl "T3" function_props nil)
+    (group_symmetric formula-decl nil symmetric nil)
+    (group? const-decl "bool" pred_algebra nil)
+    (member const-decl "bool" sets nil))
+   nil)
+  (power_set_subgroup_sym-1 nil 3788797061
+   ("" (skeep)
+    (("" (expand "subgroup?")
+      (("" (split)
+        (("1" (expand "subset?")
+          (("1" (skeep)
+            (("1" (typepred "y")
+              (("1" (expand "member")
+                (("1" (expand "power_set")
+                  (("1" (skeep)
+                    (("1" (lemma "power_closed")
+                      (("1" (inst -1 "symmetric" "y" "n!1")
+                        (("1" (assert)
+                          (("1" (expand "member")
+                            (("1" (assert) nil nil)) nil))
+                          nil)
+                         ("2" (hide 2)
+                          (("2" (rewrite "group_symmetric") nil nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil)
+         ("2" (expand "group?")
+          (("2" (split)
+            (("1" (expand "closed?")
+              (("1" (skeep)
+                (("1" (typepred "x" "y_1")
+                  (("1" (expand "power_set")
+                    (("1" (skeep*)
+                      (("1" (expand "member")
+                        (("1" (inst 1 "n!1 + n!2")
+                          (("1" (lemma "power_add")
+                            (("1" (inst -1 "symmetric" "y" "n!1" "n!2")
+                              (("1" (assert) nil nil)
+                               ("2"
+                                (rewrite "group_symmetric")
+                                nil
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("2" (expand "associative?")
+              (("2" (skeep)
+                (("2" (expand "restrict")
+                  (("2" (lemma "group_symmetric")
+                    (("2" (expand "group?")
+                      (("2" (flatten)
+                        (("2" (hide-all-but (-2 1))
+                          (("2" (expand "associative?")
+                            (("2" (inst -1 "x" "y!1" "z")
+                              (("1"
+                                (expand "restrict")
+                                (("1" (propax) nil nil))
+                                nil)
+                               ("2"
+                                (hide 2)
+                                (("2"
+                                  (typepred "z")
+                                  (("2"
+                                    (expand "power_set")
+                                    (("2"
+                                      (skeep)
+                                      (("2"
+                                        (lemma "power_closed")
+                                        (("2"
+                                          (inst
+                                           -1
+                                           "symmetric"
+                                           "y"
+                                           "n!1")
+                                          (("1"
+                                            (expand "member")
+                                            (("1" (assert) nil nil))
+                                            nil)
+                                           ("2"
+                                            (rewrite "group_symmetric")
+                                            nil
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("3"
+                                (hide 2)
+                                (("3"
+                                  (typepred "y!1")
+                                  (("3"
+                                    (expand "power_set")
+                                    (("3"
+                                      (skeep)
+                                      (("3"
+                                        (lemma "power_closed")
+                                        (("3"
+                                          (inst
+                                           -1
+                                           "symmetric"
+                                           "y"
+                                           "n!1")
+                                          (("1"
+                                            (expand "member")
+                                            (("1" (assert) nil nil))
+                                            nil)
+                                           ("2"
+                                            (rewrite "group_symmetric")
+                                            nil
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil)
+                               ("4"
+                                (hide 2)
+                                (("4"
+                                  (typepred "x")
+                                  (("4"
+                                    (expand "power_set")
+                                    (("4"
+                                      (skeep)
+                                      (("4"
+                                        (lemma "power_closed")
+                                        (("4"
+                                          (inst
+                                           -1
+                                           "symmetric"
+                                           "y"
+                                           "n!1")
+                                          (("1"
+                                            (expand "member")
+                                            (("1" (assert) nil nil))
+                                            nil)
+                                           ("2"
+                                            (rewrite "group_symmetric")
+                                            nil
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("3" (expand "member")
+              (("3" (expand "power_set")
+                (("3" (inst 1 "0")
+                  (("3" (expand "^") (("3" (propax) nil nil)) nil))
+                  nil))
+                nil))
+              nil)
+             ("4" (expand "identity?")
+              (("4" (skeep)
+                (("4" (expand "restrict")
+                  (("4" (split)
+                    (("1" (decompose-equality)
+                      (("1" (expand "o ") (("1" (propax) nil nil))
+                        nil))
+                      nil)
+                     ("2" (decompose-equality)
+                      (("2" (expand "o ") (("2" (propax) nil nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil)
+             ("5" (expand "inv_exists?")
+              (("5" (skeep)
+                (("5" (typepred "x")
+                  (("5" (expand "power_set")
+                    (("5" (skeep)
+                      (("5" (lemma "symmetric_is_torsion")
+                        (("5" (expand "torsion?")
+                          (("5" (flatten)
+                            (("5" (hide -1)
+                              (("5"
+                                (inst -1 "y^n!1")
+                                (("1"
+                                  (skeep)
+                                  (("1"
+                                    (case-replace "n!2 = 1")
+                                    (("1"
+                                      (expand "^" -2 2)
+                                      (("1"
+                                        (expand "^" -2 3)
+                                        (("1"
+                                          (case-replace
+                                           "y ^ n!1 o (LAMBDA (i: below[n]): i) = y ^ n!1")
+                                          (("1"
+                                            (inst
+                                             1
+                                             "(LAMBDA (i: below[n]): i)")
+                                            (("1" (grind) nil nil)
+                                             ("2"
+                                              (expand "power_set")
+                                              (("2"
+                                                (inst 1 "0")
+                                                (("2"
+                                                  (expand "^")
+                                                  (("2"
+                                                    (propax)
+                                                    nil
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil)
+                                           ("2"
+                                            (hide 2)
+                                            (("2"
+                                              (decompose-equality)
+                                              (("2" (grind) nil nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil)
+                                     ("2"
+                                      (lemma "composition_prod")
+                                      (("2"
+                                        (inst -1 "y" "n!2" "n!1")
+                                        (("2"
+                                          (replace -1 -2)
+                                          (("2"
+                                            (inst 2 "y^((n!2-1)*n!1)")
+                                            (("1"
+                                              (replace -3 2)
+                                              (("1"
+                                                (split)
+                                                (("1"
+                                                  (lemma "power_add")
+                                                  (("1"
+                                                    (inst
+                                                     -1
+                                                     "symmetric"
+                                                     "y"
+                                                     "n!1"
+                                                     "(n!2 - 1) * n!1")
+                                                    (("1"
+                                                      (assert)
+                                                      nil
+                                                      nil)
+                                                     ("2"
+                                                      (typepred
+                                                       "n!1"
+                                                       "n!2")
+                                                      (("2"
+                                                        (hide-all-but
+                                                         (-1 -2 1 3))
+                                                        (("2"
+                                                          (case
+                                                           "n!1 = 0")
+                                                          (("1"
+                                                            (assert)
+                                                            nil
+                                                            nil)
+                                                           ("2"
+                                                            (assert)
+                                                            (("2"
+                                                              (lemma
+                                                               " both_sides_times_pos_gt2")
+                                                              (("2"
+                                                                (inst
+                                                                 -1
+                                                                 "n!1"
+                                                                 "n!2"
+                                                                 "1")
+                                                                (("2"
+                                                                  (prop)
+                                                                  (("1"
+                                                                    (grind)
+                                                                    nil
+                                                                    nil)
+                                                                   ("2"
+                                                                    (assert)
+                                                                    nil
+                                                                    nil))
+                                                                  nil))
+                                                                nil))
+                                                              nil))
+                                                            nil))
+                                                          nil))
+                                                        nil))
+                                                      nil)
+                                                     ("3"
+                                                      (rewrite
+                                                       "group_symmetric")
+                                                      nil
+                                                      nil))
+                                                    nil))
+                                                  nil)
+                                                 ("2"
+                                                  (lemma "power_add")
+                                                  (("2"
+                                                    (inst
+                                                     -1
+                                                     "symmetric"
+                                                     "y"
+                                                     "(n!2 - 1) * n!1"
+                                                     "n!1")
+                                                    (("1"
+                                                      (assert)
+                                                      nil
+                                                      nil)
+                                                     ("2"
+                                                      (lemma
+                                                       " both_sides_times_pos_gt2")
+                                                      (("2"
+                                                        (inst
+                                                         -1
+                                                         "n!1"
+                                                         "n!2"
+                                                         "1")
+                                                        (("1"
+                                                          (assert)
+                                                          nil
+                                                          nil)
+                                                         ("2"
+                                                          (assert)
+                                                          nil
+                                                          nil))
+                                                        nil))
+                                                      nil)
+                                                     ("3"
+                                                      (rewrite
+                                                       "group_symmetric")
+                                                      nil
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil)
+                                             ("2"
+                                              (expand "power_set")
+                                              (("2"
+                                                (inst
+                                                 1
+                                                 "n!1 * n!2 - n!1")
+                                                (("2"
+                                                  (hide -)
+                                                  (("2"
+                                                    (typepred
+                                                     "n!1 "
+                                                     "n!2")
+                                                    (("2"
+                                                      (lemma
+                                                       " both_sides_times_pos_gt2")
+                                                      (("2"
+                                                        (inst
+                                                         -1
+                                                         "n!1"
+                                                         "n!2"
+                                                         "1")
+                                                        (("1"
+                                                          (assert)
+                                                          nil
+                                                          nil)
+                                                         ("2"
+                                                          (assert)
+                                                          nil
+                                                          nil))
+                                                        nil))
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil)
+                                             ("3"
+                                              (hide -)
+                                              (("3"
+                                                (typepred "n!1 " "n!2")
+                                                (("3"
+                                                  (lemma
+                                                   " both_sides_times_pos_gt2")
+                                                  (("3"
+                                                    (inst
+                                                     -1
+                                                     "n!1"
+                                                     "n!2"
+                                                     "1")
+                                                    (("1"
+                                                      (assert)
+                                                      nil
+                                                      nil)
+                                                     ("2"
+                                                      (assert)
+                                                      nil
+                                                      nil))
+                                                    nil))
+                                                  nil))
+                                                nil))
+                                              nil))
+                                            nil))
+                                          nil))
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil)
+                                 ("2"
+                                  (hide -1 2)
+                                  (("2"
+                                    (lemma "power_closed")
+                                    (("2"
+                                      (inst -1 "symmetric" "y" "n!1")
+                                      (("1"
+                                        (expand "member")
+                                        (("1" (propax) nil nil))
+                                        nil)
+                                       ("2"
+                                        (rewrite "group_symmetric")
+                                        nil
+                                        nil))
+                                      nil))
+                                    nil))
+                                  nil))
+                                nil))
+                              nil))
+                            nil))
+                          nil))
+                        nil))
+                      nil))
+                    nil))
+                  nil))
+                nil))
+              nil))
+            nil))
+          nil))
+        nil))
+      nil))
+    nil)
+   ((member const-decl "bool" sets nil)
+    (group? const-decl "bool" pred_algebra nil)
+    (group_symmetric formula-decl nil symmetric nil)
+    (O const-decl "T3" function_props nil)
+    (power_closed formula-decl nil pred_algebra nil)
+    (power_set const-decl "set[T]" pred_algebra nil)
+    (boolean nonempty-type-decl nil booleans nil)
+    (bool nonempty-type-eq-decl nil booleans nil)
+    (NOT const-decl "[bool -> bool]" booleans nil)
+    (number nonempty-type-decl nil numbers nil)
+    (number_field_pred const-decl "[number -> boolean]" number_fields
+     nil)
+    (number_field nonempty-type-from-decl nil number_fields nil)
+    (real_pred const-decl "[number_field -> boolean]" reals nil)
+    (real nonempty-type-from-decl nil reals nil)
+    (rational_pred const-decl "[real -> boolean]" rationals nil)
+    (rational nonempty-type-from-decl nil rationals nil)
+    (integer_pred const-decl "[rational -> boolean]" integers nil)
+    (int nonempty-type-eq-decl nil integers nil)
+    (>= const-decl "bool" reals nil)
+    (nat nonempty-type-eq-decl nil naturalnumbers nil)
+    (< const-decl "bool" reals nil)
+    (nonneg_int nonempty-type-eq-decl nil integers nil)
+    (> const-decl "bool" reals nil)
+    (posnat nonempty-type-eq-decl nil integers nil)
+    (n formal-const-decl "posnat" symmetric nil)
+    (below type-eq-decl nil nat_types nil)
+    (set type-eq-decl nil sets nil)
+    (symmetric const-decl "set[[below[n] -> below[n]]]" symmetric nil)
+    (subset? const-decl "bool" sets nil)
+    (power_add formula-decl nil pred_algebra nil)
+    (numfield nonempty-type-eq-decl nil number_fields nil)
+    (+ const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (nnint_plus_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (TRUE const-decl "bool" booleans nil)
+    (closed? const-decl "bool" pred_algebra nil)
+    (restrict const-decl "R" restrict nil)
+    (associative? const-decl "bool" operator_defs nil)
+    (^ def-decl "T" pred_algebra nil)
+    (identity? const-decl "bool" operator_defs nil)
+    (symmetric_is_torsion formula-decl nil symmetric nil)
+    (= const-decl "[T, T -> boolean]" equalities nil)
+    (real_ge_is_total_order name-judgement "(total_order?[real])"
+     real_props nil)
+    (nnint_times_nnint_is_nnint application-judgement "nonneg_int"
+     integers nil)
+    (int_minus_int_is_int application-judgement "int" integers nil)
+    (mult_divides2 application-judgement "(divides(m))" divides nil)
+    (mult_divides1 application-judgement "(divides(n))" divides nil)
+    (- const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (* const-decl "[numfield, numfield -> numfield]" number_fields nil)
+    (int_plus_int_is_int application-judgement "int" integers nil)
+    (nonneg_real nonempty-type-eq-decl nil real_types nil)
+    (posreal nonempty-type-eq-decl nil real_types nil)
+    (both_sides_times_pos_gt2 formula-decl nil real_props nil)
+    (real_gt_is_strict_total_order name-judgement
+     "(strict_total_order?[real])" real_props nil)
+    (torsion? const-decl "bool" pred_algebra nil)
+    (inv_exists? const-decl "bool" pred_algebra nil)
+    (subgroup? const-decl "bool" pred_algebra nil))
+   shostak)))
+

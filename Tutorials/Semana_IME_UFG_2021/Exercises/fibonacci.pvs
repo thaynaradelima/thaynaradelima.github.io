@@ -1,0 +1,40 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%      Short course on 
+%        Interactively Proving Mathematical Theorems
+%          Summer Workshop in Mathematics UnB, 2020
+%
+%          Examples on Induction
+%
+%       Thaynara Arielly de Lima  UFG
+%       Mauricio Ayala-Rincon     UnB
+%       Last modified: February 10 2020
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+fibonacci : THEORY
+
+  BEGIN
+
+  n : VAR nat
+
+  fibonacci(n:nat): RECURSIVE nat =
+       IF n <= 1 THEN n ELSE 
+       fibonacci(n-1) + fibonacci(n-2)
+       ENDIF
+       MEASURE n
+
+
+ fibonacci_ineq: CONJECTURE                      %Example Induction
+      fibonacci(n+1) >= fibonacci(n)
+
+
+ fibonacci_exp_lim:CONJECTURE                    %Example Strong Induction
+       fibonacci(n) <= expt(1.7,n)
+
+ 
+ fibonacci_exp_lim_2:CONJECTURE                   % Homework
+       n >= 11 IMPLIES fibonacci(n) >= expt(1.5,n)
+
+
+  END fibonacci

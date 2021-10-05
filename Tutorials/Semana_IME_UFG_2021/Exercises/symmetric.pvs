@@ -1,0 +1,46 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%      Short course on 
+%        Interactively Proving Mathematical Theorems
+%          Summer Workshop in Mathematics UnB, 2020
+%
+%          Exercise set complementing Classical HO deduction
+%
+%       Thaynara Arielly de Lima  UFG
+%       Mauricio Ayala-Rincon     UnB
+%       Last modified: February 10 2020
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+symmetric[n:posnat]: THEORY
+
+  BEGIN
+
+ 
+  IMPORTING pred_algebra[ [below[n] -> below[n]], o, LAMBDA(i: below[n]): i],
+  	    function_props2[below[n],below[n],below[n],below[n]],
+	    sets_aux@set_of_functions[below[n],below[n]]
+
+  symmetric: set[[below[n] -> below[n]]] = {f : [below[n] -> below[n]] | bijective?(f)}
+
+  group_symmetric: CONJECTURE      %    Example Sec. 3 / 4
+        group?(symmetric)
+
+  sym_gt2_notabelian: CONJECTURE   %    Ex. Sec. 3 / 4
+        n >=3 IMPLIES NOT abelian_group?(symmetric)
+
+  sym_cyc_lt2: CONJECTURE         %    Ex. Sec. 3 / 4 
+        cyclic?(symmetric) IMPLIES n < 3
+
+  symmetric_is_finite: CONJECTURE  %        Ex. Sec. 4  
+        is_finite(symmetric)
+
+  symmetric_is_torsion: CONJECTURE     %    Ex. Sec. 4
+        torsion?(symmetric)
+
+  power_set_subgroup_sym: CONJECTURE    %    
+   FORALL (y:(symmetric)): subgroup?(power_set(y),symmetric)
+        
+  
+
+  END symmetric

@@ -1,0 +1,299 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%      Formalização de Teoremas em Assistentes de Prova
+%          
+%         Motivating the use of ITPs
+%
+%       Thaynara Arielly de Lima  UFG
+%       Mauricio Ayala-Rincon     UnB
+%       Last modified: October 3 2021
+%
+%  Theories with examples on algebra, analysis and geometry
+%    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+topology:   THEORY
+ 
+
+%%****************************************************************************
+%%  This theory includes a topological proof, due to H. Fürstenberg,
+%%  of infinitude of PRIMES.
+%%
+%%  A topology consisting of open sets that are unions of integer sets
+%%  of the form { x = a + n b | n in Z}, for all integers a,  and b > 0
+%%  is given.   In this topology, any nonempty open set is infinite, and   
+%%  complements of open sets are closed and vice versa as expected. Also  
+%%  these unions may be infinite, and finite intersections of open sets
+%%  are open as finite unions of closed sets are closed.
+%%  Notice that sets of the form { x = a + n b | n in Z} are also closed
+%%  since their complements are finite unions of sets as below:
+%%  { x = (a+1) + n b | n in Z} U ... U { x = (a+(b-1)) + n b | n in Z}
+%%  Now, consider the set A given by the union of all sets of the form 
+%%  {x = 0 + n p | n in Z}, where p in PRIMES. Notice that the complement 
+%%  of A is the set {-1, 1}.
+%%  If PRIMES were finite, as a finite union of of closed sets A would be
+%%  closed too, and consequently {-1, 1} would be open, which contradicts
+%%  the fact that any nonempty open set is infinite.  Thus, PRIMES is
+%%  infinite.
+%%
+%%  For didactical issues, this theory does not consider algebraic aspects
+%%  of sets of integers, but all the required aspects may be considered
+%%  in order to obtain a complete formalization as a nice further exercise.
+%%****************************************************************************
+
+ BEGIN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Interpretation of the predicates over the set of integers
+%
+% add_cyclic? is the family of sets of the form {a + n b | n \in Z}.
+% open? sets are unions of add_cyclic? sets, also denoted as Union_add_cyclics?
+% fin_int_open? are sets built as finite intersections of open sets
+% fin_union_closed? are sets built as finite unions of closed sets
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% PRIMES is the set of primes.
+% per_PRIMES is the integer set A above described
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+ add_cyclic?,
+ open?,
+ Union_add_cyclics?,
+ fin_int_open?,
+ fin_union_closed? : pred[set[int]]
+
+ PRIMES : set[int]
+
+ X,Y : VAR set[int]
+
+ finite?: pred[set[int]] = is_finite[int]
+
+
+ Ax00: AXIOM add_cyclic?(emptyset)
+
+ Ax01: AXIOM open?(X) <=> Union_add_cyclics?(X)
+
+ Ax02: AXIOM Union_add_cyclics?(X) AND Union_add_cyclics?(Y) => Union_add_cyclics?(union(X,Y))
+
+ Prop01: LEMMA open?(X) AND open?(Y) => open?(union(X,Y))
+
+ Ax03: AXIOM add_cyclic?(X) => Union_add_cyclics?(X)
+
+ Ax04: AXIOM fin_int_open?(X) => Union_add_cyclics?(X)
+ 
+ Prop02: LEMMA fin_int_open?(X) => open?(X)
+
+ closed?(X): bool = open?(complement(X))
+
+ Ax05: AXIOM X /= emptyset AND Union_add_cyclics?(X) => NOT finite?(X)
+
+ Ax06: AXIOM add_cyclic?(X) => EXISTS (Y:set[int]): Union_add_cyclics?(Y) AND X = complement(Y)
+
+ Prop03: LEMMA add_cyclic?(X) => closed?(X)
+
+ Ax07: AXIOM fin_union_closed?(X) => closed?(X)
+
+ per_PRIMES: set[int] = complement({x: int | x = 1 OR x = -1})
+
+ Ax08: AXIOM Union_add_cyclics?(per_PRIMES) 
+
+ Ax09: AXIOM finite?(PRIMES) => fin_union_closed?(per_PRIMES)
+
+ Prop04: LEMMA finite?({x: int | x = 1 OR x = -1})
+
+ Prop05: LEMMA NOT finite?(PRIMES)
+ 
+ END topology
+
+
+%*****************************************************************************
+
+
+
+groups: THEORY
+
+%%****************************************************************************
+%%
+%%  This theory includes propositional proofs based on axioms of properties
+%%  about symmetric, cyclic and torsion groups.
+%%
+%%****************************************************************************
+
+BEGIN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Interpretation of the Boolean variables
+%
+% Cyclic :  Exists x : For all y Exists i : x^i = y, i.e.,
+%                 x * ... * x = y OR y = (x^-1) * ... * (x^-1)
+%                     |i|-times            |i|-times              
+% Abelian : For all x, y : x * y = y * x
+% Symmetric_n : ({ f :{1,...,n} -> {1,...,n} | f bijective}, o)
+% nGT2 : n is greater than 2 in Symmetric_n
+% FiniteDegree : For all y: Exists n: y^n = y * ... * y =  one
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+  Finite, Infinite, Cyclic, Abelian, Symmetric_n, nGT2, FiniteDegree, Torsion, AbelTorsion: bool
+  
+  Ax01 : Axiom Cyclic => Abelian
+
+  Ax02 : Axiom Symmetric_n AND nGT2 => NOT Abelian
+
+  Ax03 : AXIOM FiniteDegree <=>  Torsion
+
+  Ax04 : AXIOM Finite => FiniteDegree
+
+  Ax05 : AXIOM NOT Finite <=> Infinite
+
+  Ax06 : AXIOM Abelian AND Torsion <=> AbelTorsion
+
+
+  Pr01  : LEMMA Symmetric_n AND Cyclic => NOT nGT2   
+
+  Pr02 :  LEMMA Finite => Torsion                    
+
+  Pr03 :  LEMMA Cyclic AND Finite => AbelTorsion     
+
+  Pr04 :  LEMMA NOT Torsion => Infinite         
+
+
+  END groups
+
+%*****************************************************************************
+
+ real_analysis:    THEORY
+
+%%****************************************************************************
+%%
+%%  This theory includes classical results about continuous, differentiable
+%%  and integrable real functions
+%%
+%%****************************************************************************
+
+BEGIN
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Interpretation of the predicates over real functions
+%
+% polynomial: polynomial function
+% continuous: continuous function on its domain
+% r_differentiable: a function is right differentiable on its domain
+% l_differentiable: a function is left differentiable on its domain
+% eq_L_R_diff: left and right derivate are the same for each point of domain
+% integrable: a function is integrable on its domain
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% mod_func: function that returns the absolute value of a real number
+% step_func: Function that returns the floor of a real number
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+polynomial,
+continuous,
+r_differentiable,
+l_differentiable,
+differentiable,
+integrable,
+eq_L_R_diff: pred[[real->real]]
+
+ f : VAR [real -> real]
+ 
+ mod_func (r : real) : real = abs(r)
+
+ step_func (r : real) : real = choose({ n : int | n <= r AND r < n + 1 })
+
+ AX01: AXIOM (r_differentiable(f) AND l_differentiable(f) AND eq_L_R_diff(f)) <=> differentiable(f)
+
+ AX02: AXIOM NOT eq_L_R_diff(mod_func)
+
+ AX03: AXIOM differentiable(f) => continuous(f)
+
+ AX04: AXIOM NOT continuous(step_func)
+
+ AX05: AXIOM continuous(f) => integrable(f)
+
+ AX06: AXIOM polynomial(f) => differentiable(f)
+
+ Pr01: LEMMA  NOT differentiable(mod_func)
+
+ Pr02: LEMMA NOT differentiable(step_func)
+
+ Pr03: LEMMA polynomial(f) => integrable(f)
+ 
+
+ END real_analysis
+
+%*****************************************************************************
+
+
+ 
+
+Pick_Theorem : THEORY
+
+%%****************************************************************************
+%%
+%%  This theory includes a proof of Pick's Theorem from the Euler's formula.
+%%
+%% Integral polygons in R^2 are those ones whose vertices belong to the
+%% lattice Z^2. Pick's Theorem states that the area, say Area_p, of an integral
+%% polygon P is Area_p = ni - 1 + nb/2, where ni and nb denote the number
+%% of internal and boundary vertices in P, respectively.
+%%
+%% Firstly, define as an elementary triangle this one that is an integral
+%% triangle and no contain vertices of Z^2 other than its own vertices.
+%% One can prove that the area of any elementary triangle is 1/2. 
+%% There exists a triangulation of the integral polygon P in elementary
+%% triangules that can be seen as a plane graph with f - 1 internal
+%% faces. Thus, Area_p = (f - 1)/2. Consider n = ni+nb the number of vertices
+%% in P that is equal to the sum of internal and boundary vertices, and
+%% e = ei+eb the number of edges in P that is equal to the sum of internal
+%% and boundary edges. Notice that the number of boundary vertices and edges
+%% is the same (eb = nb). Furthermore, notice that each elementary triangle in
+%% the boundary has a boundary and two internal edges, and any internal
+%% elementary triangle has three internal edges; thus,it holds that
+%% 3 * (f - 1) = 2 * ei + eb and, consequently, f = 2 * (e - f) - eb + 3.
+%% Euler's formula  states that if G is a connected plane graph with n vertices,
+%% e edges and f faces, then n - e + f = 2. Thus, f = 2 * (n - 2) - nb + 3
+%% and, consequently, Area_p = (f - 1)/2 = ni - 1 + nb/2. 
+%%
+%%****************************************************************************
+
+ 
+BEGIN
+
+% P integral polygon
+% f number of faces of an elementary triangulation of P
+% e and n number of edges and vertices of the triangulation of P,
+% also called P
+% eb and ei number of boundary and internal edges of P
+% nb and ni number of boundary and internal nodes of P
+% Area_p is used for the area of an integral polygon.
+
+n, e, ni, nb, ei, eb, f : nat
+Area_p : real
+
+Ax01 : AXIOM ni + nb = n
+Ax02 : AXIOM ei + eb = e
+Ax03 : AXIOM eb = nb
+Ax04 : AXIOM 3 * (f - 1) = 2 * ei + eb
+EulerFormula : AXIOM n - e + f = 2
+AreaIntPoly : AXIOM Area_p = (f - 1) / 2  
+
+Prop01 : LEMMA 3 * f = 2 * ei + 2 * eb - eb + 3
+
+Prop02 : LEMMA 3 * f = 2 * e - eb + 3
+
+Prop03 : LEMMA f = 2 * (e - f) - eb + 3
+
+EulerFormula_variant : LEMMA e - f = n - 2  
+
+Pick_Theorem : LEMMA Area_p = ni + nb / 2 - 1
+
+
+
+END Pick_Theorem
