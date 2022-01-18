@@ -1,0 +1,198 @@
+%%-------------------** Term Rewriting Systems (ARS & TRS) **-------------------
+%%                                                                          
+%% Authors         : 
+%%                   Mauricio Ayala Rincon  
+%%                   Universidade de Brasília - Brazil  
+%%              
+%% Last Modified On: 10 January 2022                                     
+%%
+%%
+%%---------------------------------------------------------------------------
+%%
+%% Illustration of the use of PVS to prove Newman's Lemma 
+%%
+%%---------------------------------------------------------------------------
+%%
+%% Predicate deduction training based on TRSs and ARSs Properties 
+%% Here abstract reduction relations are specified and induction
+%% used to show a few of their properties. 
+%%                           
+%% C? confluent                      (<<- o ->>)  in  (->> o <<-)
+%% LC? Locally Confluent               (<- o ->)  in  (->> o <<-)
+%% DP? Diamond Property            (<- o -> \ =)  in  (-> o <-)
+%% SemiC? Semi-confluent              (<- o ->>)  in  (->> o <<-)
+%% SC? Strongly Confluent              (<- o ->)  in  ((-> U =) o <<-)
+%% CR? Church-Rosser                     (<<->>)  in  (->> o <<-)  2
+%% CPJ? Critical Pair Joinability       
+%% SN? Strongly Normalising              
+%% UNF? Uniqueness Normal Forms          
+%% CO? Convergent
+%% Comm?                             (<<- o -->>) in (-->> o <<-)                               
+%% LComm?                              (<- o -->) in (-->> o <<-)                         
+%% SComm?                              (<- o -->) in ((--> U =) o <<-)                                             
+%% SemiComm?                          (<- o -->>) in (-->> o <<-)                                  
+%%                                           
+%%                                               
+%%---------------------------------------------------------------------------
+
+predCommutation : THEORY
+BEGIN
+
+T : NONEMPTY_TYPE 
+
+IMPORTING
+    orders@closure_ops[T],
+    sets_lemmas[T],
+    TRS@noetherian[T]
+
+
+R, R1, R2 : VAR PRED[[T,T]]
+
+x, y, z  : VAR T
+
+
+%% A few properties
+%% Using PVS prelude definitions for sets, relations and orders:
+%%    reflexive?, symmetric?, transitive?, equivalence?
+%%    RC, TC and RTC, well_founded?
+
+% Symmetric, Equivalence Closure and Inverse
+% Notice the use of IUnion and >>> iterate <<< in the
+% specification of the transitive closure TR. 
+
+transitive: TYPE = (transitive?)
+reflexive: TYPE = (reflexive?)
+
+reflexive_transitive?(R): bool = reflexive?(R) & transitive?(R)
+
+reflexive_transitive: TYPE = (reflexive_transitive?)
+
+
+TC(R) : transitive = IUnion(LAMBDA (p : posnat): iterate(R, p))  
+RTC(R): reflexive_transitive = IUnion(LAMBDA(n : nat): iterate(R, n)) 
+SC(R)(x,y) : bool  = R(x,y) OR R(y,x)
+EC(R)(x,y) : bool =  TC(SC(R))(x,y) OR x = y
+Inv(R)(x,y) : bool = R(y,x) 
+Joinable(R)(x,y) : bool = EXISTS (z : T) : RTC(R)(x,z) AND RTC(R)(y,z)
+
+DP?(R) :bool = FORALL (x, y, z) :  R(x,y) AND R(x,z)  => EXISTS (u:T) : R(y,u) AND R(z,u)  
+SN?(R) : bool =  noetherian?(R) % i.e.,  well_founded?(converse(R))
+LC?(R) : bool = FORALL (x, y, z) :  R(x,y) AND R(x,z)  => EXISTS (u:T) : RTC(R)(y,u) AND RTC(R)(z,u) 
+C?(R) : bool =  FORALL (x, y, z) :  RTC(R)(x,y) AND RTC(R)(x,z)  => EXISTS (u:T) : RTC(R)(y,u) AND RTC(R)(z,u)   
+CO?(R) : bool = SN?(R) and C?(R)
+CR?(R) : bool = FORALL (x, y) : EC(R)(x,y) => EXISTS (u:T) : RTC(R)(x,u) AND RTC(R)(y,u)
+ 
+%% EXERCISES - direct proofs without reusing previous lemmas in
+%%             the imported theory predTRS.pvs 
+%%             Also using >>> induction  <<<. 
+
+% Diamond Property implies Local Confluence
+DP_IMPL_LC : LEMMA DP?(R) => LC?(R)
+
+% Confluence implies Local Confluence
+% @QED C_IMPL_LC proved by ayala on Tue, 11 Jan 2022 21:16:06 GMT
+C_IMPL_LC : LEMMA C?(R) => LC?(R) 
+
+% Monotony of abstract reduction relation composition iteration 
+% Note: the proof uses induction: "(induct n)" 
+monotony_iterate : LEMMA FORALL (n : nat) :
+   subset?(R1,R2) => subset?(iterate(R1,n), iterate(R2,n))
+
+% Invariance of subset relation for the transitive closure
+% The proof uses monotony_iterate
+monotony_TC : LEMMA subset?(R1,R2)  => subset?(TC(R1), TC(R2)) 
+
+% Invariance of subset relation for the reflexive transitive closure
+% The proof uses monotony_iterate as in the previous proof
+monotony_RTC : LEMMA subset?(R1, R2) => subset?(RTC(R1), RTC(R2))
+
+% A trivial lemma to simplify proofs
+iterate_one : LEMMA iterate(R,1) = R  
+% There exists iterate_1 in orders@relation_iterate
+
+% Relating addition and compositions of iterations
+% The proof uses induction: "(induct n)" and 
+% associativity of o: "assoc"
+
+iterate_addition : LEMMA FORALL (m, n : nat) : 
+    iterate(R, m + n) = iterate(R, m) o iterate(R, n)
+% There exists iterate_add in orders@relation_iterate
+
+TC_in_RTC : LEMMA subset?(TC(R), RTC(R))
+
+RTC_in_EC : LEMMA subset?(RTC(R),EC(R))
+
+TC_in_EC : LEMMA subset?(TC(R), EC(R))
+
+% Symmetry of the symmetric closure
+% The proof also uses induction: "(induct n)"
+iterate_SC : LEMMA   FORALL (x, y : T, n : nat) :
+    iterate(SC(R), n)(x,y) = iterate(SC(R), n)(y,x)  
+
+% symmetry of the symmetric closure
+symmetry_SC : LEMMA symmetric?(SC(R))
+
+% Hint: use previous lemma.
+EC_symmetric : LEMMA EC(R) = Inv(EC(R)) 
+
+% CR implies C. The trivial case of C equivalent to CR.
+% Hint: use TR_in_EC, EC_symmetric and iterate_addition
+CR_IMPL_C : LEMMA CR?(R) => C?(R) 
+
+% The non trivial case:
+Aux_C_CR : LEMMA FORALL (i : nat)  :
+  C?(R) => ( iterate(SC(R), i)(x,y) => Joinable(R)(x,y))    
+
+
+C_IMPL_CR : LEMMA C?(R) => CR?(R)
+
+
+% CR equivalent to C
+C_eq_CR : THEOREM C?(R) <=> CR?(R)
+
+
+%% 
+
+
+%%
+%% CHALLENGE: prove Newman's Lemma as specified below.
+%%
+%% Noetherian Induction will be required that is specified in the imported
+%% TRS@noetherian theory as Lemma "noetherian_induction".  This lemma
+%% will require instantiation with "R" and the addequate predicate given
+%% as "LAMBDA(a:T): (FORALL(b,c:T) : RTC(R)(a, b) AND RTC(R)(a, c) IMPLIES
+%%                     EXISTS (d:T) : RTC(R)(b, d) AND RTC(R)(c, d))"
+%% This predicate expresses confluence for all peacks from the element
+%% "a".   After instantiation you will need to apply Noetherian Induction
+%% and then prove that the induction hypothesis holds indeed. 
+
+% @QED NewmanLemma proved by ayala on Sat, 08 Jan 2022 15:20:58 GMT
+NewmanLemma :  CONJECTURE FORALL(R) : SN?(R)  => (  C?(R) <=> LC?(R) )
+
+
+%% The formalization follows the graphical sketch of the classical proof:
+%%
+%%
+%%
+%%                                     x
+%%                                   /    \
+%%                                  v      v
+%%                                 b1  LC   c1
+%%                                /  \     /  \ 
+%%                              */    \* */    \*
+%%                             v       v v      v
+%%                             b   NI  ulc       c
+%%                              \      /        /  
+%%			                     \* */   NI    /
+%%                                 v v        /
+%%                                  ul       /     
+%%                                   \      /
+%%                                    \*  */
+%%                                     v  v
+%%                                       u
+%%
+%% LC and NI stand for "Local-Confluent" and "Noetherian Induction".
+%% For details, see exercise 4 in the companion foils of the ISR 2014 
+%% rewriting tutorial.
+%% 
+END predCommutation

@@ -1,0 +1,180 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%       Formalizing Theorems with PVS
+%        
+%       Summer Workshop in Mathematics, UnB, Brasilia, 2022
+%
+%       Thaynara Arielly de Lima  UFG
+%       Mauricio Ayala-Rincon     UnB  
+%       Last modified: January 10 2022
+%
+%  Theories with examples on groups: cyclyc and torsion groups.
+%    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+pred_algebra [T:TYPE+,*:[T,T->T],e:T]
+		: THEORY
+
+  BEGIN
+
+  G, H: VAR set[T]
+  a, x, y: VAR T
+  n,m: nat
+ 
+
+ %---------------------------------- Basic definitions -------------------------%
+
+  closed?(G): bool = FORALL (x,y:(G)): member(x * y, G)      
+
+  inv_exists?(G): bool = FORALL (x:(G)): EXISTS (y:(G)): x * y = e AND y * x = e
+
+  group?(G): bool = closed?(G) AND
+                    associative?[(G)](*) AND
+  	     	          member(e,G) AND 
+                    identity?[(G)](*)(e) AND
+		                inv_exists?(G)
+
+ %————————————————————————————————————————————–
+
+  inv(G:(group?))(x:(G)): (G) = choose({y:(G) | x * y = e AND y * x = e})
+
+ %————————————————————————————————————————————–
+
+  % @QED inv_e proved by ayala on Mon, 10 Jan 2022 15:14:09 GMT %%
+  inv_e: LEMMA 
+     FORALL (G:(group?)): inv(G)(e) = e
+
+  % @QED id_charac proved by thaynaradelima on Wed, 12 Jan 2022 21:12:18 GMT %%
+  id_charac: LEMMA                            
+    FORALL (G:(group?), x:(G)): x = e IFF x * x = x 
+
+  left_cancellative: LEMMA             
+    FORALL (G:(group?), x,y,z:(G)): x * y = x * z IFF y = z  
+
+  right_cancellative: LEMMA                                
+    FORALL (G:(group?), x,y,z:(G)): y * x = z * x IFF y = z 
+
+  % @QED right_unicity_id proved by thaynaradelima on Wed, 12 Jan 2022 22:10:03 GMT %?
+  right_unicity_id: LEMMA
+    FORALL (G: (group?), x:(G)): exists1!(y:(G)): x * y = x  
+
+  left_unicity_id: LEMMA	 		      	     
+    FORALL (G: (group?), x:(G)): exists1!(y:(G)): y * x = x
+
+  % @QED inv_inv proved by thaynaradelima on Wed, 12 Jan 2022 22:17:23 GMT
+  inv_inv: LEMMA
+    FORALL (G: (group?), x:(G)): inv(G)(inv(G)(x)) = x
+
+  % @QED inv_mult proved by thaynaradelima on Wed, 12 Jan 2022 22:18:30 GMT
+  inv_mult: LEMMA  
+     FORALL (G:(group?), x, y:(G)): inv(G)(x * y) = inv(G)(y) * inv(G)(x)
+
+  % @QED inv_unicity proved by thaynaradelima on Fri, 07 Jan 2022 19:44:48 GMT
+  inv_unicity: LEMMA
+     FORALL (G: (group?), x:(G)): exists1!(y:(G)): x * y = e  AND y * x = e
+        
+  abelian_group?(G): bool = group?(G) AND commutative?[(G)](*);
+
+ %————————————————————————————————————————————–
+
+ 
+
+^(y : T, n : nat )
+   : RECURSIVE T =
+      	  IF n = 0 THEN e
+		      ELSE  y * ^(y, n-1)
+     		      ENDIF
+		      MEASURE n
+
+;
+ ^(G:(group?))(y:(G), n: int) : (G) = 
+                         IF n>= 0 THEN ^(y,n)
+        	     	       	 ELSE ^(inv(G)(y),-n) ENDIF 
+; 
+
+ %————————————————————————————————————————————–
+ 
+
+   power_gen(x:T): set[T] = { y: T | EXISTS (n:nat) : y = x^n }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Inductive properties of power_gen  (Induction Exercises)
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ % @QED power_closed_aux proved by ayala on Mon, 10 Jan 2022 16:07:32 GMT %%
+ power_closed_aux: LEMMA                 
+   FORALL (G: (group?), y: (G), n: nat): member(^(y,n),G)
+    
+ % @QED power_closed proved by ayala on Mon, 10 Jan 2022 16:14:19 GMT %%
+ power_closed: LEMMA
+   FORALL (G: (group?), y: (G), n: int): member(^(G)(y,n),G)
+
+ power_e_aux: LEMMA 
+   FORALL (G: (group?), n: nat): e^n = e
+
+ power_e: LEMMA 
+   FORALL (G: (group?), i: int): ^(G)(e,i) = e
+
+ % @QED power_add_aux proved by ayala on Mon, 10 Jan 2022 18:53:14 GMT %%
+ power_add_aux: LEMMA                         
+   FORALL (G: (group?), y: (G), n,m: nat): ^(y,n) * ^(y,m) = ^(y, n+m)
+
+ power_add_aux2: LEMMA                
+   FORALL (G: (group?), y: (G), n, m: nat): ^(G)(y,m) * ^(G)(inv(G)(y),n)  = ^(G)(y, m - n)
+
+ power_commute_aux: LEMMA                  
+   FORALL (G: (group?), y: (G), n,m: nat): ^(y,n) * ^(y,m) = ^(y,m) * ^(y,n)
+
+ power_commute: THEOREM                  
+   FORALL (G: (group?), y: (G), n,m: int): ^(G)(y,n) * ^(G)(y,m) = ^(G)(y,m) * ^(G)(y,n)
+
+ % @QED power_add proved by thaynaradelima on Thu, 13 Jan 2022 20:13:15 GMT  %%
+ power_add: LEMMA                         
+    FORALL (G: (group?), y: (G), n,m: int): ^(G)(y,n) * ^(G)(y,m) = ^(G)(y, n+m)
+
+ power_mult_aux: LEMMA                   
+      FORALL (G:(group?), y:(G), m,n: nat): (y^n)^m  = y^(n*m)
+
+ power_inv_aux: LEMMA   
+      FORALL (G:(group?), y:(G), n: nat): inv(G)(y^n) = inv(G)(y)^n
+
+ power_mult: THEOREM                   
+      FORALL (G:(group?), y:(G), i,j: int): ^(G)(^(G)(y,i),j) = ^(G)(y,i*j)
+      
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%   Cyclic groups are Abelian  %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   cyclic?(G): bool = group?(G) AND EXISTS (y: (G)): FORALL(x:(G)): EXISTS (n: int): ^(G)(y,n) = x
+
+   % @QED cyc_abel proved by ayala on Mon, 10 Jan 2022 18:59:01 GMT %%
+   cyc_abel: LEMMA                              
+      cyclic?(G) IMPLIES abelian_group?(G)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% Finite groups are Torsion groups %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   torsion?(G): bool = group?(G) AND FORALL (y:(G)): EXISTS (n: posnat) : y^n = e
+
+   % @QED finite_torsion proved by ayala on Mon, 10 Jan 2022 19:17:35 GMT %%
+   finite_torsion: LEMMA                        
+      FORALL (G: (group?)): is_finite(G) IMPLIES torsion?(G)
+
+   
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% In finite groups, power_gen(y) is a subgroup %%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      
+
+  subgroup?(H:set[T],G:(group?)): bool = subset?(H,G) AND group?(H)
+
+  % @QED power_gen_fin_group_is_subgroup proved by ayala on Mon, 10 Jan 2022 23:06:18 GMT %%
+  power_gen_fin_group_is_subgroup: LEMMA
+       FORALL (G: (group?),y:(G)): is_finite(G) IMPLIES subgroup?(power_gen(y),G)
+
+
+  END pred_algebra
