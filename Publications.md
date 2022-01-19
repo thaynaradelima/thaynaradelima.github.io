@@ -3,13 +3,13 @@
 
 ## Work in progress
 
-* L. A. da Silveira, T. A. de Lima, J. L. Soncco-Álvarez, and M. Ayala-Rincón. *Comparing Synchronous and Asynchronous Heterogeneous Parallel Island Models.* In preparation 2021. See pdf and source at [genoma site](http://genoma.cic.unb.br). 
+* L. A. da Silveira, T. A. de Lima, J. L. Soncco-Álvarez, and M. Ayala-Rincón. *Heterogeneous Parallel Island Models.* Accepted IEEE SSCI 2021. See pdf and source at [genoma site](http://genoma.cic.unb.br). 
 
   
 *  L. A.  da Silveira, J. L. Soncco-Álvarez,  J. de Barros,
                         T. A. de Lima, C. H.   Llanos,
                         and M. Ayala-Rincón. *On The Behaviour of Parallel
-                        Island Models Genetic Algorithms.* Submitted 2020. See
+                        Island Models Genetic Algorithms.* Submitted 2021. See
                         pdf and source at [genoma site](http://genoma.cic.unb.br).
 			
 
