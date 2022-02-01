@@ -2,9 +2,6 @@
 
 
 ## Work in progress
-
-* L. A. da Silveira, T. A. de Lima, J. L. Soncco-Álvarez, and M. Ayala-Rincón. *Heterogeneous Parallel Island Models.* Accepted IEEE SSCI 2021. See pdf and source at [genoma site](http://genoma.cic.unb.br). 
-
   
 *  L. A.  da Silveira, J. L. Soncco-Álvarez,  J. de Barros,
                         T. A. de Lima, C. H.   Llanos,
@@ -17,11 +14,13 @@
 
 ### 2021 
 
+* L. A. da Silveira, T. A. de Lima, J. L. Soncco-Álvarez, and M. Ayala-Rincón. *Heterogeneous Parallel Island Models.* IEEE Symposium Series on Computational Intelligence (SSCI), [doi](http://dx.doi.org/10.1109/SSCI50451.2021.9659938), 2021. See pdf and source at [genoma site](http://genoma.cic.unb.br). 
+
 * T. A. de Lima, A. L. Galdino, A. Borges Avelar, and
 			M. Ayala-Rincón. *Formalization of
 			Ring Theory in PVS - Isomorphism Theorems,
 			Principal, Prime and Maximal Ideals,Chinese
-			Remainder Theorem.*  Online Fist, Journal of Automated Reasoning,  [doi](https://doi.org/10.1007/s10817-021-09593-0),  2021.  
+			Remainder Theorem.* Journal of Automated Reasoning,  [doi](https://doi.org/10.1007/s10817-021-09593-0),  2021.  
   
 
 
