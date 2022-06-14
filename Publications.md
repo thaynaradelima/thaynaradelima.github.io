@@ -2,6 +2,8 @@
 
 
 ## Work in progress
+
+* F.F. Serrano Suárez, T.A. de Lima, M. Ayala-Rincón Hall’s Theorem for Enumerable Families of Finite Sets .pdf, Submitted 2022.
   
 *  L. A.  da Silveira, J. L. Soncco-Álvarez,  J. de Barros,
                         T. A. de Lima, C. H.   Llanos,
