@@ -4,7 +4,7 @@
 ## Research Interest
 
 - Formal Methods
-- Evolutionary Algorithms to Sorting Permutations
+- Evolutionary Algorithms for Sorting Permutations
  
 
 ## Address
