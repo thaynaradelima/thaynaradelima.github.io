@@ -73,12 +73,12 @@ and M. Ayala-Rincón. *Behaviour of Bioinspired Algorithms
 
 * L.A. da Silveira, J.L. Soncco-Álvarez, T.A. de Lima and  M. Ayala-Rincón.*Memetic and Opposition-Based Learning Genetic Algorithms for Sorting Unsigned Genomes by Translocations*.Proc. NaBIC 2015 (Vol.419, series Advances in Intelligent Systems and Computing pp 73-85, 2016). <a href="http://dx.doi.org/10.1007/978-3-319-27400-3_7">(doi)</a>, 2015.  
    
-* L.A. da Silveira, J.L. Soncco-&Aacute;lvarez, T.A. de Lima and  M. Ayala-Rinc&oacute;n <cite>Computing Translocation Distance by a Genetic Algorithm</cite>.
+* L.A. da Silveira, J.L. Soncco-&Aacute;lvarez, T.A. de Lima and  M. Ayala-Rinc&oacute;n *Computing Translocation Distance by a Genetic Algorithm*.
   IEEE Xplore Proceedings CLEI 2015. <a href="http://dx.doi.org/10.1109/CLEI.2015.7359994">(doi)</a>, 2015.    
   
 ### 2013
   
- * T.A. de Lima and  M. Ayala-Rinc&oacute;n <cite>On the average reversal distance to sort signed permutations </cite>. 
+ * T.A. de Lima and  M. Ayala-Rinc&oacute;n *On the average reversal distance to sort signed permutations*. 
 Extended abstract presented at  <a href="http://www.lix.polytechnique.fr/pp2013/index.php?page=program">Permutation Patterns 2013</a>, Paris, 2013. 
 
   
