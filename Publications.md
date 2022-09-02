@@ -5,10 +5,10 @@
 
 * T.A. de Lima, A.B. Avelar, A.L. Galdino, M. Ayala-Rincón. *Formalizing Factorization on Euclidean Domains and Abstract Euclidean Algorithms* [.pdf](Papersdir/Abstract_Euclidean_Algorithm_2022.pdf), Submitted 2022.
 
-*  L. A.  da Silveira, T. A. de Lima and M. Ayala-Rincón. *Reconfigurable Heterogeneous Parallel Island Models.* [ArXiv version](https://arxiv.org/abs/2205.02916), Submitted 2022. 
+*  L. A.  da Silveira, T. A. de Lima and M. Ayala-Rincón. *Reconfigurable Heterogeneous Parallel Island Models.* [ArXiv version](https://arxiv.org/abs/2205.02916), Accepted IEEE SSCI 2022. 
 			
 
-* F.F. Serrano Suárez, T.A. de Lima, M. Ayala-Rincón. *Hall’s Theorem for Enumerable Families of Finite Sets* [.pdf](Papersdir/Hall_Theorem_Isa_2022.pdf), Submitted 2022.
+* F.F. Serrano Suárez, T.A. de Lima, M. Ayala-Rincón. *Hall’s Theorem for Enumerable Families of Finite Sets* [.pdf](Papersdir/Hall_Theorem_Isa_2022.pdf), Accepted CICM 2022 (To be published in LNCS).
   
 *  L. A.  da Silveira, J. L. Soncco-Álvarez,  J. de Barros,
                         T. A. de Lima, C. H.   Llanos,
