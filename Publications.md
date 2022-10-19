@@ -7,8 +7,6 @@
 
 *  L. A.  da Silveira, T. A. de Lima and M. Ayala-Rincón. *Reconfigurable Heterogeneous Parallel Island Models.* [ArXiv version](https://arxiv.org/abs/2205.02916), Accepted IEEE SSCI 2022. 
 			
-
-* F.F. Serrano Suárez, T.A. de Lima, M. Ayala-Rincón. *Hall’s Theorem for Enumerable Families of Finite Sets* [.pdf](Papersdir/Hall_Theorem_Isa_2022.pdf), Accepted CICM 2022 (To be published in LNCS).
   
 *  L. A.  da Silveira, J. L. Soncco-Álvarez,  J. de Barros,
                         T. A. de Lima, C. H.   Llanos,
@@ -18,6 +16,11 @@
 			
 
 ## Published works
+
+### 2022
+
+* F.F. Serrano Suárez, T.A. de Lima, M. Ayala-Rincón. *Hall’s Theorem for Enumerable Families of Finite Sets* [.pdf](Papersdir/Hall_Theorem_Isa_2022.pdf), Intelligent Computer Mathematics. CICM 2022. Lecture Notes in Computer Science(), vol 13467. Springer, Cham.,
+[doi](https://doi.org/10.1007/978-3-031-16681-5_7)
 
 ### 2021 
 
