@@ -4,6 +4,9 @@
 
 # Tutorials
 
+### [Mechanizing Mathematics](Tutorials/UNAL_Manizales_2023)
+ Tutorial for Universidad Nacional de Colombia - Sede Manizales, Facultad de Ciencias Exactas y Naturales.
+
 ### [Formalizing Theorems with PVS](Tutorials/Workshop_UnB_2022)
  Tutorial for XIV Summer Workshop in Mathematics MAT/UnB, Brasília, 2022.
 
