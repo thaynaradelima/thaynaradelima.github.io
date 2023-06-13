@@ -3,7 +3,7 @@
 
 ## Work in progress
 
-* T.A. de Lima, A.B. Avelar, A.L. Galdino, M. Ayala-Rincón. *Formalizing Factorization on Euclidean Domains and Abstract Euclidean Algorithms* [.pdf](Papersdir/Abstract_Euclidean_Algorithm_2022.pdf), Submitted 2022.
+* T.A. de Lima, A.B. Avelar, A.L. Galdino, M. Ayala-Rincón. *Formalizing Factorization on Euclidean Domains and Abstract Euclidean Algorithms* [.pdf](Papersdir/Abstract_Euclidean_Algorithm_2022.pdf), [Accepted LSFA 2023](https://sites.google.com/ufg.br/lsfa2023/accepted-papers?authuser=0#h.ecemncsiizqn).
 
 
 *  L. A.  da Silveira, J. L. Soncco-Álvarez,  J. de Barros,
@@ -14,6 +14,12 @@
 			
 
 ## Published works
+
+### 2023
+
+* F.F. Serrano Suárez, T.A. de Lima, M. Ayala-Rincón. *Mechanising Hall’s Theorem for Countable Graphs* [.pdf](https://easychair.org/publications/preprint_open/g3F7), Easy Chair Preprint. LPAR 2023. No. 10365: 1-14. 
+
+* M. Ayala-Rincón, T. A. de Lima, A. Borges Avelar, A. L. Galdino. *Formalization of Algebraic Theorems in PVS.* In Proceedings of 24th International Conference on Logic for Programming, Artificial Intelligence and Reasoningm LPAR, EPiC Series in Computing, vol. 94:1-10  [doi](https://easychair.org/publications/paper/93F2),  2023. 
 
 ### 2022
 
