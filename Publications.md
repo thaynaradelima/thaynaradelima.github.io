@@ -9,7 +9,7 @@
 *  L. A.  da Silveira, J. L. Soncco-Álvarez,  J. de Barros,
                         T. A. de Lima, C. H.   Llanos,
                         and M. Ayala-Rincón. *On The Behaviour of Parallel
-                        Island Models Genetic Algorithms.*, Submitted 2021. See
+                        Island Models Genetic Algorithms.*, Accepted in [Applied Soft Computing Journal](https://www.sciencedirect.com/journal/applied-soft-computing). See
                         pdf and source at [genoma site](http://genoma.cic.unb.br).
 			
 
