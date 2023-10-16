@@ -14,11 +14,11 @@
 
 * F.F. Serrano Suárez, T.A. de Lima, M. Ayala-Rincón. *Mechanising Hall’s Theorem for Countable Graphs* [.pdf](https://easychair.org/publications/preprint_open/g3F7), Easy Chair Preprint. LPAR 2023. No. 10365: 1-14. 
 
-* M. Ayala-Rincón, T. A. de Lima, A. Borges Avelar, A. L. Galdino. *Formalization of Algebraic Theorems in PVS.* In Proceedings of 24th International Conference on Logic for Programming, Artificial Intelligence and Reasoningm LPAR, EPiC Series in Computing, vol. 94:1-10  [doi](https://easychair.org/publications/paper/93F2),  2023. 
+* M. Ayala-Rincón, T. A. de Lima, A. Borges Avelar, A. L. Galdino. *Formalization of Algebraic Theorems in PVS.* In Proceedings of 24th International Conference on Logic for Programming, Artificial Intelligence and Reasoning LPAR, EPiC Series in Computing, vol. 94:1-10  [doi](https://easychair.org/publications/paper/93F2),  2023. 
 
 ### 2022
 
-*  L. A.  da Silveira, T. A. de Lima and M. Ayala-Rincón. *Reconfigurable Heterogeneous Parallel Island Models*. SSCI 2022: 1618 - 1625. [ArXiv version](https://arxiv.org/abs/2205.02916)
+*  L. A.  da Silveira, T. A. de Lima and M. Ayala-Rincón. *Reconfigurable Heterogeneous Parallel Island Models*. SSCI 2022: 1618 - 1625. [doi](https://ieeexplore.ieee.org/document/10022289)
 
 * F.F. Serrano Suárez, T.A. de Lima, M. Ayala-Rincón. *Hall’s Theorem for Enumerable Families of Finite Sets* [.pdf](Papersdir/Hall_Theorem_Isa_2022.pdf), Intelligent Computer Mathematics. CICM 2022. Lecture Notes in Computer Science(), vol 13467. Springer, Cham.,
 [doi](https://doi.org/10.1007/978-3-031-16681-5_7)
@@ -70,7 +70,7 @@ and M. Ayala-Rincón. *Behaviour of Bioinspired Algorithms
   Evolutionary Computation [CEC 2018](http://www.ecomp.poli.br/~wcci2018).
   [doi](https://doi.org/10.1109/CEC.2018.8477968), 2018.Extended version at [genoma site](http://genoma.cic.unb.br). 
 
-* T.A. de Lima and  M. Ayala-Rincón.*On the average number of reversals needed to sort signed permutations*. Discrete Applied Mathematic 235:59-80.[doi](https://doi.org/10.1016/j.dam.2017.09.014), 2018. 
+* T.A. de Lima and  M. Ayala-Rincón.*On the average number of reversals needed to sort signed permutations*. Discrete Applied Mathematics 235:59-80.[doi](https://doi.org/10.1016/j.dam.2017.09.014), 2018. 
 
 
 ### 2015
