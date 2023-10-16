@@ -6,12 +6,11 @@
 * T.A. de Lima, A.B. Avelar, A.L. Galdino, M. Ayala-Rincón. *Formalizing Factorization on Euclidean Domains and Abstract Euclidean Algorithms* [.pdf](Papersdir/Abstract_Euclidean_Algorithm_2022.pdf), [Accepted LSFA 2023](https://sites.google.com/ufg.br/lsfa2023/accepted-papers?authuser=0#h.ecemncsiizqn).
 
 
-* L. A.  da Silveira, T. A. de Lima, J. de Barros, J. L. Soncco-Álvarez, C. H. Llanos, and M. Ayala-Rincón. *On The Behaviour of Parallel Island Models Genetic Algorithms.*, Accepted in [Applied Soft Computing Journal](https://www.sciencedirect.com/journal/applied-soft-computing). See pdf and source at [genoma site](http://genoma.cic.unb.br).
-			
-
 ## Published works
 
 ### 2023
+
+* L. A.  da Silveira, T. A. de Lima, J. de Barros, J. L. Soncco-Álvarez, C. H. Llanos, and M. Ayala-Rincón. *On The Behaviour of Parallel Island Models Genetic Algorithms*, Applied Soft Computing Journal.[doi](https://doi.org/10.1016/j.asoc.2023.110880).  See pdf and source at [genoma site](http://genoma.cic.unb.br).
 
 * F.F. Serrano Suárez, T.A. de Lima, M. Ayala-Rincón. *Mechanising Hall’s Theorem for Countable Graphs* [.pdf](https://easychair.org/publications/preprint_open/g3F7), Easy Chair Preprint. LPAR 2023. No. 10365: 1-14. 
 
