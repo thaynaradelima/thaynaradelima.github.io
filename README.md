@@ -1,4 +1,4 @@
-| <img src="foto3.jpg" alt="drawing" width="120"/> | **<font size="+2">Thaynara Arielly de Lima</font>**<br>Assistant Professor<br>Instituto de Matemática e Estatística (IME/UFG)<br>Universidade Federal de Goiás |
+| <img src="foto3.jpg" alt="drawing" width="120"/> | **<font size="+2">Thaynara Arielly de Lima</font>**<br>Assistant Professor (tenured) <br>Instituto de Matemática e Estatística (IME/UFG)<br>Universidade Federal de Goiás |
 
 
 ## Research Interest
