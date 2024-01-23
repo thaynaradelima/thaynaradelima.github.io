@@ -20,7 +20,7 @@ CEP: 74001-970
 
 **Phone Number**: +55 (62) 3521-1208
 
- | [IME/UFG](http://www.ime.ufg.br) | [EFFA Group](https://ww2.inf.ufg.br/~daniel/effa/) | [EA Sorting Genomes](http://genoma.cic.unb.br) | [nasa/pvslib/algebra](https://github.com/nasa/pvslib/tree/master/algebra) |[CV Lattes](http://lattes.cnpq.br/3324489027928883) | 
+ | [IME/UFG](http://www.ime.ufg.br) | [EFFA Group](https://ww2.inf.ufg.br/~daniel/effa/) | [EA Sorting Genomes](http://genoma.cic.unb.br) | [nasa/pvslib/algebra](https://github.com/nasa/pvslib/tree/master/algebra) | [CV Lattes](http://lattes.cnpq.br/3324489027928883) | 
 
 
 
