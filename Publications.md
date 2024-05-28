@@ -3,10 +3,18 @@
 
 ## Work in progress
 
-* T.A. de Lima, A.B. Avelar, A.L. Galdino, M. Ayala-Rincón. *Formalizing Factorization on Euclidean Domains and Abstract Euclidean Algorithms* [.pdf](Papersdir/Abstract_Euclidean_Algorithm_2022.pdf), [Accepted LSFA 2023](https://sites.google.com/ufg.br/lsfa2023/accepted-papers?authuser=0#h.ecemncsiizqn).
+* T.A. de Lima, A.L. Galdino, B.B. O. Ribeiro, M. Ayala-Rincón. *A Formalization of the General Theory of Quaternions*, Accepted ITP 2024. Tbilisi, Georgia.
+
+* L. A.  da Silveira, T. A. de Lima, M. Ayala-Rincón. *On Reconfiguring Heterogeneous Parallel Island Models*. Submitted to Swarm and Evolutionary Computation (2023).
+
+* F.F. Serrano Suárez, T.A. de Lima, M. Ayala-Rincón. *Combinatorial Applications of the Compactness Theorem*. Submitted to Journal of Automated Reasoning. (2024).
 
 
 ## Published works
+
+### 2024
+
+* T.A. de Lima, A.B. Avelar, A.L. Galdino, M. Ayala-Rincón. *Formalizing Factorization on Euclidean Domains and Abstract Euclidean Algorithms*, In Proceedings LSFA 2023. EPTCS 402, 2024, pp. 18-33. [doi](https://doi.org/10.4204/EPTCS.402.5).
 
 ### 2023
 
