@@ -7,7 +7,7 @@
 
 * L. A.  da Silveira, T. A. de Lima, M. Ayala-Rincón. *On Reconfiguring Heterogeneous Parallel Island Models*. Accepted for publication in Swarm and Evolutionary Computation.
 
-* F.F. Serrano Suárez, T.A. de Lima, M. Ayala-Rincón. *Combinatorial Applications of the Compactness Theorem*. Submitted to Journal of Automated Reasoning.
+* F.F. Serrano Suárez, M. Ayala-Rincón, T.A. de Lima. *Combinatorial Applications of the Compactness Theorem*. Submitted to Journal of Automated Reasoning.
 
 
 ## Published works
