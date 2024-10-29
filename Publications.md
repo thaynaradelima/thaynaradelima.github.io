@@ -12,7 +12,7 @@
 
 ### 2024
 
-* * L. A.  da Silveira, T. A. de Lima, M. Ayala-Rincón. *On Reconfiguring Heterogeneous Parallel Island Models*, Swarm and Evolutionary Computation.[doi](https://doi.org/10.1016/j.swevo.2024.101624).
+* L. A.  da Silveira, T. A. de Lima, M. Ayala-Rincón. *On Reconfiguring Heterogeneous Parallel Island Models*, Swarm and Evolutionary Computation.[doi](https://doi.org/10.1016/j.swevo.2024.101624).
 
 * T.A. de Lima, A.B. Avelar, A.L. Galdino, M. Ayala-Rincón. *Formalizing Factorization on Euclidean Domains and Abstract Euclidean Algorithms*, In Proceedings LSFA 2023. EPTCS 402, 2024, pp. 18-33. [doi](https://doi.org/10.4204/EPTCS.402.5).
 
