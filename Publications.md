@@ -5,14 +5,14 @@
 
 * T.A. de Lima, A.L. Galdino, B.B. O. Ribeiro, M. Ayala-Rincón. *A Formalization of the General Theory of Quaternions*, Accepted for publication in Proceedings ITP 2024. Tbilisi, Georgia.
 
-* L. A.  da Silveira, T. A. de Lima, M. Ayala-Rincón. *On Reconfiguring Heterogeneous Parallel Island Models*. Accepted for publication in Swarm and Evolutionary Computation.[doi](https://doi.org/10.1016/j.swevo.2024.101624).
-
 * F.F. Serrano Suárez, M. Ayala-Rincón, T.A. de Lima. *Combinatorial Applications of the Compactness Theorem*. Submitted to Journal of Automated Reasoning.
 
 
 ## Published works
 
 ### 2024
+
+* * L. A.  da Silveira, T. A. de Lima, M. Ayala-Rincón. *On Reconfiguring Heterogeneous Parallel Island Models*, Swarm and Evolutionary Computation.[doi](https://doi.org/10.1016/j.swevo.2024.101624).
 
 * T.A. de Lima, A.B. Avelar, A.L. Galdino, M. Ayala-Rincón. *Formalizing Factorization on Euclidean Domains and Abstract Euclidean Algorithms*, In Proceedings LSFA 2023. EPTCS 402, 2024, pp. 18-33. [doi](https://doi.org/10.4204/EPTCS.402.5).
 
