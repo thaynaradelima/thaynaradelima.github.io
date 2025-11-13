@@ -1,12 +1,15 @@
 # Publications    [<img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:.8em;margin-right:.5em;" alt="ORCID iD icon">](https://orcid.org/0000-0002-0852-9086)  [<img src="DBLP_logo.png" style="width:4em;margin-right:.5em;" alt="DBLP logo">](https://dblp.org/pid/173/9154.html) 
 
 
-## Work in progress
-
-* F.F. Serrano Suárez, M. Ayala-Rincón, T.A. de Lima. *Combinatorial Applications of the Compactness Theorem*. Submitted to Journal of Automated Reasoning.
-
-
 ## Published works
+
+### 2025
+
+* M. Ayala-Rincón, T.A. de Lima, G. Ehling, T. Kutsia. *Graded Quantitative Narrowing*, In 18th International Conference on Intelligent Computer Mathematics (CICM 2025). Lecture Notes in Computer Science, Volume 16136, pp.113-132, Springer, Cham(2025).[doi](https://doi.org/10.1007/978-3-032-07021-0_7).
+
+* B. B. de Oliveira Ribeiro, M. M. Moscato, T.A. de Lima, M. Ayala-Rincón. *A PVS Library on the Infinitude of Primes*, In 18th International Conference on Intelligent Computer Mathematics (CICM 2025). Lecture Notes in Computer Science, Volume 16136, pp. 412 - 430, , Springer, Cham(2025).[doi](https://doi.org/10.1007/978-3-032-07021-0_23).
+  
+*  M. Ayala-Rincón, T. A. de Lima, M. J. Dias Lima, M. M. Moscato, and T. Kutsia. *Verification of an Anti-Unification Algorithm in PVS*, In The 17th NASA Formal Methods Symposium (NFM2025). Lecture Notes in Computer Science, Volume 15682, pp. 54 - 71, Springer, Cham (2025).[doi](https://doi.org/10.1007/978-3-031-93706-4_4).
 
 ### 2024
 
