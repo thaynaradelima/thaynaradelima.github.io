@@ -9,7 +9,7 @@
 
 * B. B. de Oliveira Ribeiro, M. M. Moscato, T.A. de Lima, M. Ayala-Rincón. *A PVS Library on the Infinitude of Primes*, In 18th International Conference on Intelligent Computer Mathematics (CICM 2025). Lecture Notes in Computer Science, Volume 16136, pp. 412 - 430, , Springer, Cham(2025).[doi](https://doi.org/10.1007/978-3-032-07021-0_23).
   
-* M. Ayala-Rincón, T. A. de Lima, M. J. Dias Lima, M. M. Moscato, and T. Kutsia. *Verification of an Anti-Unification Algorithm in PVS*, In The 17th NASA Formal Methods Symposium (NFM2025). Lecture Notes in Computer Science, Volume 15682, pp. 54 - 71, Springer, Cham (2025).[doi](https://doi.org/10.1007/978-3-031-93706-4_4).<br>[<img src="Figures/honorable_mention_symbol.png" alt="drawing" width="20"/> **(Honorable Mention Award)**](Figures/honorable_mention_certificates_NFM_unification_PVS.pdf)
+* M. Ayala-Rincón, T. A. de Lima, M. J. Dias Lima, M. M. Moscato, and T. Kutsia. *Verification of an Anti-Unification Algorithm in PVS*, In The 17th NASA Formal Methods Symposium (NFM2025). Lecture Notes in Computer Science, Volume 15682, pp. 54 - 71, Springer, Cham (2025).[doi](https://doi.org/10.1007/978-3-031-93706-4_4).<br>[<img src="Figures/honorable_mention_symbol.png" alt="drawing" width="25"/> **(Honorable Mention Award)**](Figures/honorable_mention_certificates_NFM_unification_PVS.pdf)
   
 
 ### 2024
